@@ -43,7 +43,7 @@ export function SiteHeader() {
           </a>
           <a
             href="#search"
-            className="rounded-sm bg-green px-4 py-2 font-display text-xs font-extrabold uppercase tracking-widest text-navy-dark transition-all hover:bg-green-light"
+            className="rounded-sm bg-green px-4 py-2 font-display text-xs font-extrabold uppercase tracking-widest text-white transition-all hover:bg-green-dark"
           >
             Tour a Space →
           </a>
