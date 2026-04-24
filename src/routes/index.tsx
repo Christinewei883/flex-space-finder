@@ -411,7 +411,7 @@ function HomePage() {
                 <span className="block h-0.5 w-6 bg-green" /> Our Spaces
               </div>
               <h2 className="font-display text-4xl font-black uppercase text-navy md:text-5xl">
-                Real space. Real photos. Move-in ready.
+                Move-in ready spaces
               </h2>
               <p className="mt-3 max-w-xl text-base text-navy/60">
                 Every facility is operational the day you sign — power on, doors open, dock plates ready.
