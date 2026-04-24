@@ -16,11 +16,15 @@ import {
 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { IndustriesSlider } from "@/components/IndustriesSlider";
-import heroWarehouse from "@/assets/real-warehouse-exterior.jpg";
-import spaceWarehouse from "@/assets/real-warehouse-interior.jpg";
-import spaceYard from "@/assets/real-forklift-warehouse.jpg";
-import spaceOffice from "@/assets/real-coworking-lounge.jpg";
-import spaceStudio from "@/assets/space-studio.jpg";
+import heroWarehouse from "@/assets/space-warehouse-1.webp";
+import spaceWarehouse from "@/assets/space-warehouse-2.webp";
+import spaceYard from "@/assets/space-yard.webp";
+import spaceOffice from "@/assets/space-office.webp";
+import spaceStudio from "@/assets/space-desk.webp";
+import tourLoading from "@/assets/space-loading.webp";
+import tourAisle from "@/assets/space-warehouse-3.webp";
+import tourCommunity from "@/assets/space-community.webp";
+import tourSecurity from "@/assets/space-warehouse-4.webp";
 import cubeworkLogo from "@/assets/cubework-logo.svg";
 
 export const Route = createFileRoute("/")({
