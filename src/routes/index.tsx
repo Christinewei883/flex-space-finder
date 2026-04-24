@@ -582,19 +582,19 @@ function HomePage() {
       </section>
 
       {/* CTA */}
-      <section id="pricing" className="relative overflow-hidden bg-navy-dark px-6 py-28 lg:px-12">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_color-mix(in_oklab,var(--green)_15%,transparent),_transparent_70%)]" />
+      <section id="pricing" className="relative overflow-hidden bg-green px-6 py-28 lg:px-12">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.25),_transparent_70%)]" />
         <div className="relative mx-auto max-w-2xl text-center">
-          <div className="mb-5 inline-flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-green">
-            <span className="animate-pulse-dot h-1.5 w-1.5 rounded-full bg-green" />
+          <div className="mb-5 inline-flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-white">
+            <span className="animate-pulse-dot h-1.5 w-1.5 rounded-full bg-white" />
             Available This Week
           </div>
           <h2 className="font-display text-5xl font-black uppercase leading-[0.92] text-white text-balance md:text-6xl">
             Stop Negotiating Leases.
             <br />
-            <span className="text-green">Start Moving Freight.</span>
+            <span className="text-navy">Start Moving Freight.</span>
           </h2>
-          <p className="mt-5 text-base leading-relaxed text-white/55">
+          <p className="mt-5 text-base leading-relaxed text-white/85">
             Tour a space this week. Sign a flexible agreement. Move in by Friday. The opposite of
             traditional industrial real estate.
           </p>
@@ -602,13 +602,13 @@ function HomePage() {
           <div className="mt-10 flex flex-wrap justify-center gap-3">
             <a
               href="#search"
-              className="inline-flex items-center gap-2 rounded-md bg-green px-9 py-4 font-display text-base font-extrabold uppercase tracking-widest text-navy-dark shadow-xl shadow-green/30 transition-all hover:-translate-y-0.5 hover:bg-green-light"
+              className="inline-flex items-center gap-2 rounded-md bg-white px-9 py-4 font-display text-base font-extrabold uppercase tracking-widest text-green-dark shadow-xl shadow-navy/20 transition-all hover:-translate-y-0.5 hover:bg-secondary"
             >
               Find a Space <ArrowRight className="h-4 w-4" />
             </a>
             <a
               href="tel:8003386369"
-              className="inline-flex items-center gap-2 rounded-md border border-white/25 px-9 py-4 font-display text-base font-bold uppercase tracking-widest text-white transition-all hover:border-white hover:bg-white/5"
+              className="inline-flex items-center gap-2 rounded-md border border-white/60 px-9 py-4 font-display text-base font-bold uppercase tracking-widest text-white transition-all hover:border-white hover:bg-white/10"
             >
               <Phone className="h-4 w-4" /> 800-338-6369
             </a>
