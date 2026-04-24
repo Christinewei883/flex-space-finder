@@ -24,6 +24,18 @@ import tourAisle from "@/assets/space-warehouse-3.webp";
 import tourCommunity from "@/assets/space-community.webp";
 import tourSecurity from "@/assets/space-warehouse-4.webp";
 import cubeworkLogo from "@/assets/cubework-logo.svg";
+import locFontana from "@/assets/loc-fontana.jpg";
+import locTorrance from "@/assets/loc-torrance.jpg";
+import locSantaAna from "@/assets/loc-santaana.jpg";
+import locHayward from "@/assets/loc-hayward.jpg";
+import locGlendale from "@/assets/loc-glendale.jpg";
+import locTolleson from "@/assets/loc-tolleson.jpg";
+import locHouston from "@/assets/loc-houston.jpg";
+import locDallas from "@/assets/loc-dallas.jpg";
+import locAtlanta from "@/assets/loc-atlanta.jpg";
+import locChicago from "@/assets/loc-chicago.jpg";
+import locKent from "@/assets/loc-kent.jpg";
+import locLittleRock from "@/assets/loc-littlerock.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -159,15 +171,18 @@ const TOUR = [
 ];
 
 const LOCATIONS = [
-  { state: "California", name: "Los Angeles Basin", count: "10 facilities" },
-  { state: "California", name: "Inland Empire", count: "4 facilities" },
-  { state: "Texas", name: "Houston", count: "2 facilities" },
-  { state: "Texas", name: "DFW Metro", count: "2 facilities" },
-  { state: "Georgia", name: "Atlanta Metro", count: "3 facilities" },
-  { state: "Georgia", name: "Savannah / Pooler", count: "2 facilities" },
-  { state: "Illinois", name: "Chicago Metro", count: "3 facilities" },
-  { state: "Arizona", name: "Phoenix & Tucson", count: "3 facilities" },
-  { state: "Washington", name: "Seattle / Kent", count: "2 facilities" },
+  { state: "California", name: "Fontana", address: "Fontana, CA, 92337", img: locFontana },
+  { state: "California", name: "Torrance", address: "Torrance, CA, 90501", img: locTorrance },
+  { state: "California", name: "Santa Ana", address: "Santa Ana, CA, 92707", img: locSantaAna },
+  { state: "California", name: "Hayward", address: "Hayward, CA, 94544", img: locHayward },
+  { state: "Arizona", name: "Glendale", address: "Glendale, AZ, 85355", img: locGlendale },
+  { state: "Arizona", name: "Tolleson", address: "Tolleson, AZ, 85353", img: locTolleson },
+  { state: "Texas", name: "Houston", address: "Houston, TX, 77038", img: locHouston },
+  { state: "Texas", name: "Dallas", address: "Dallas, TX, 75212", img: locDallas },
+  { state: "Georgia", name: "Atlanta", address: "Atlanta, GA, 30336", img: locAtlanta },
+  { state: "Illinois", name: "Chicago", address: "Bedford Park, IL, 60638", img: locChicago },
+  { state: "Washington", name: "Kent", address: "Kent, WA, 98032", img: locKent },
+  { state: "Arkansas", name: "Little Rock", address: "Little Rock, AR, 72209", img: locLittleRock },
 ];
 
 const TESTIMONIALS = [
@@ -355,17 +370,17 @@ function HomePage() {
         </div>
       </section>
 
-      {/* LOCATIONS — horizontal pill strip */}
+      {/* LOCATIONS — Airbnb-style image cards */}
       <section id="locations" className="border-b border-border bg-white">
-        <div className="mx-auto max-w-7xl px-6 py-8 lg:px-12">
-          <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-            <div className="flex items-center gap-3">
-              <span className="font-display text-[11px] font-bold uppercase tracking-widest text-green-dark">
-                <MapPin className="mr-1.5 inline h-3.5 w-3.5" /> 50 Locations · 22 States
-              </span>
-              <span className="hidden text-sm text-muted-foreground sm:inline">
-                Find space in your market
-              </span>
+        <div className="mx-auto max-w-7xl px-6 py-12 lg:px-12">
+          <div className="mb-6 flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <div className="mb-2 inline-flex items-center gap-2 font-display text-[11px] font-bold uppercase tracking-widest text-green">
+                <span className="block h-0.5 w-6 bg-green" /> Locations
+              </div>
+              <h2 className="font-display text-2xl font-black uppercase text-navy md:text-3xl">
+                50 Locations · 22 States
+              </h2>
             </div>
             <a
               href="#"
@@ -376,26 +391,52 @@ function HomePage() {
           </div>
 
           <div className="-mx-6 overflow-x-auto px-6 lg:-mx-12 lg:px-12">
-            <div className="flex gap-2 pb-1">
+            <div className="flex gap-4 pb-3">
               {LOCATIONS.map((l) => (
                 <button
                   key={l.name}
-                  className="group flex flex-shrink-0 items-center gap-2 rounded-full border border-border bg-secondary px-4 py-2 transition-all hover:-translate-y-0.5 hover:border-green hover:bg-white hover:shadow-md"
+                  className="group flex w-[260px] flex-shrink-0 flex-col text-left transition-transform hover:-translate-y-1"
                 >
-                  <MapPin className="h-3.5 w-3.5 flex-shrink-0 text-green-dark" />
-                  <span className="font-display text-sm font-bold uppercase tracking-wide text-navy whitespace-nowrap">
-                    {l.name}
-                  </span>
-                  <span className="rounded-full bg-green/15 px-2 py-0.5 text-[10px] font-bold text-green-dark whitespace-nowrap">
-                    {l.count}
-                  </span>
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
+                    <img
+                      src={l.img}
+                      alt={`${l.name} warehouse facility`}
+                      width={800}
+                      height={600}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <span className="absolute left-3 top-3 rounded-full bg-white/95 px-2.5 py-1 font-display text-[10px] font-bold uppercase tracking-widest text-navy shadow-sm">
+                      {l.state}
+                    </span>
+                  </div>
+                  <div className="mt-3 px-1">
+                    <div className="font-display text-base font-extrabold uppercase tracking-wide text-navy">
+                      {l.name}
+                    </div>
+                    <div className="mt-0.5 text-[13px] text-muted-foreground">
+                      {l.address}
+                    </div>
+                  </div>
                 </button>
               ))}
-              <button className="flex flex-shrink-0 items-center gap-2 rounded-full border border-dashed border-border bg-white px-4 py-2 transition-all hover:border-green hover:bg-secondary">
-                <span className="font-display text-sm font-bold uppercase tracking-wide text-navy whitespace-nowrap">
-                  + 12 More States
-                </span>
-                <ArrowRight className="h-3.5 w-3.5 text-green-dark" />
+              <button className="group flex w-[260px] flex-shrink-0 flex-col text-left transition-transform hover:-translate-y-1">
+                <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-xl border-2 border-dashed border-border bg-secondary transition-colors group-hover:border-green group-hover:bg-white">
+                  <div className="text-center">
+                    <div className="font-display text-3xl font-black text-navy">+38</div>
+                    <div className="mt-1 font-display text-[11px] font-bold uppercase tracking-widest text-green-dark">
+                      More Locations
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-3 px-1">
+                  <div className="font-display text-base font-extrabold uppercase tracking-wide text-navy">
+                    Browse All
+                  </div>
+                  <div className="mt-0.5 text-[13px] text-muted-foreground">
+                    Across 22 states nationwide
+                  </div>
+                </div>
               </button>
             </div>
           </div>
