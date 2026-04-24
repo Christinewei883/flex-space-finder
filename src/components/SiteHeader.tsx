@@ -26,7 +26,7 @@ export function SiteHeader() {
             <a
               key={label}
               href={href}
-              className="text-xs font-semibold uppercase tracking-widest text-white/70 transition-colors hover:text-green"
+              className="text-xs font-semibold uppercase tracking-widest text-navy/70 transition-colors hover:text-green-dark"
             >
               {label}
             </a>
