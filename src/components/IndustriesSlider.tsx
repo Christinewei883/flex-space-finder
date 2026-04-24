@@ -109,11 +109,11 @@ export function IndustriesSlider() {
   const go = (i: number) => setIndex(Math.max(0, Math.min(totalPages - 1, i)));
 
   return (
-    <section className="bg-secondary px-6 py-24 lg:px-12">
+    <section className="bg-white px-6 py-24 lg:px-12">
       <div className="mx-auto max-w-7xl">
         <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-2xl">
-            <div className="mb-3 inline-flex items-center gap-2.5 font-display text-xs font-bold uppercase tracking-widest text-green">
+            <div className="mb-3 inline-flex items-center gap-2.5 font-display text-xs font-bold uppercase tracking-widest text-green-dark">
               <span className="block h-0.5 w-6 bg-green" /> Who We Serve
             </div>
             <h2 className="font-display text-4xl font-black uppercase leading-[0.95] text-navy md:text-5xl text-balance">
@@ -143,12 +143,12 @@ export function IndustriesSlider() {
             {INDUSTRIES.map((ind) => (
               <article
                 key={ind.title}
-                className="group flex flex-col overflow-hidden rounded-lg shadow-lg shadow-navy/10"
+                className="group flex flex-col overflow-hidden rounded-lg border border-border bg-white shadow-lg shadow-navy/5 transition-all hover:-translate-y-1 hover:border-green hover:shadow-xl hover:shadow-green/15"
                 style={{
                   flex: `0 0 calc((100% - ${(perView - 1) * 20}px) / ${perView})`,
                 }}
               >
-                <div className="relative h-60 overflow-hidden bg-navy-dark">
+                <div className="relative h-60 overflow-hidden bg-secondary">
                   <img
                     src={ind.img}
                     alt={ind.title}
@@ -157,27 +157,26 @@ export function IndustriesSlider() {
                     loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/30 to-transparent" />
                 </div>
 
-                <div className="flex flex-1 flex-col bg-navy p-7">
-                  <div className="text-[10px] font-bold uppercase tracking-[0.16em] text-green">
+                <div className="flex flex-1 flex-col bg-white p-7">
+                  <div className="text-[10px] font-bold uppercase tracking-[0.16em] text-green-dark">
                     Industry
                   </div>
-                  <h3 className="mt-1.5 font-display text-2xl font-black uppercase leading-none text-white">
+                  <h3 className="mt-1.5 font-display text-2xl font-black uppercase leading-none text-navy">
                     {ind.title}
                   </h3>
-                  <p className="mt-3 text-[15px] leading-relaxed text-white/65">{ind.desc}</p>
+                  <p className="mt-3 text-[15px] leading-relaxed text-navy/65">{ind.desc}</p>
 
                   <div className="mt-5">
-                    <div className="mb-2 text-[10px] font-semibold uppercase tracking-widest text-white/30">
+                    <div className="mb-2 text-[10px] font-semibold uppercase tracking-widest text-navy/45">
                       Used for
                     </div>
                     <div className="flex flex-wrap gap-1.5">
                       {ind.uses.map((u) => (
                         <span
                           key={u}
-                          className="rounded-full border border-green/25 bg-green/10 px-3 py-1 text-xs font-medium text-white/70"
+                          className="rounded-full border border-green/30 bg-green/10 px-3 py-1 text-xs font-medium text-green-dark"
                         >
                           {u}
                         </span>
@@ -185,10 +184,10 @@ export function IndustriesSlider() {
                     </div>
                   </div>
 
-                  <button className="mt-6 inline-flex items-center gap-2.5 self-start font-display text-sm font-bold uppercase tracking-wider text-white transition-all hover:gap-4">
+                  <button className="mt-6 inline-flex items-center gap-2.5 self-start font-display text-sm font-bold uppercase tracking-wider text-navy transition-all hover:gap-4 hover:text-green-dark">
                     Learn More
                     <span className="flex h-8 w-8 items-center justify-center rounded-full bg-green transition-transform hover:scale-110">
-                      <ArrowRight className="h-3.5 w-3.5 text-navy" strokeWidth={2.5} />
+                      <ArrowRight className="h-3.5 w-3.5 text-white" strokeWidth={2.5} />
                     </span>
                   </button>
                 </div>

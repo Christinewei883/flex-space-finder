@@ -190,47 +190,47 @@ function HomePage() {
       <SiteHeader />
 
       {/* HERO */}
-      <section className="relative flex min-h-screen items-center overflow-hidden bg-navy-dark pt-16">
+      <section className="relative flex min-h-screen items-center overflow-hidden bg-white pt-16">
         <img
           src={heroWarehouse}
           alt="Aerial view of Cubework industrial warehouse facility with loading docks and trailer yard"
           width={1920}
           height={1080}
-          className="absolute inset-0 h-full w-full object-cover opacity-40"
+          className="absolute inset-0 h-full w-full object-cover opacity-15"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-dark via-navy-dark/85 to-navy-dark/40" />
-        <div className="absolute inset-0 bg-grid opacity-60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/40" />
+        <div className="absolute inset-0 bg-grid opacity-50" />
 
         <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-16 px-6 py-20 lg:grid-cols-[1fr_440px] lg:px-12">
           <div>
-            <div className="animate-fade-up mb-6 inline-flex items-center gap-2 rounded-sm border border-green/30 bg-green/10 px-3.5 py-1.5 font-display text-xs font-bold uppercase tracking-widest text-green">
+            <div className="animate-fade-up mb-6 inline-flex items-center gap-2 rounded-sm border border-green/30 bg-green/10 px-3.5 py-1.5 font-display text-xs font-bold uppercase tracking-widest text-green-dark">
               <span className="animate-pulse-dot h-1.5 w-1.5 rounded-full bg-green" />
               50 Locations · 22 States · Move-In Ready
             </div>
 
-            <h1 className="animate-fade-up font-display text-5xl font-black uppercase leading-[0.92] tracking-tight text-white text-balance md:text-7xl xl:text-8xl">
+            <h1 className="animate-fade-up font-display text-5xl font-black uppercase leading-[0.92] tracking-tight text-navy text-balance md:text-7xl xl:text-8xl">
               Warehouse Space
               <br />
               That Moves
               <br />
-              <span className="text-green">With Your Business.</span>
+              <span className="text-green-dark">With Your Business.</span>
             </h1>
 
-            <p className="animate-fade-up mt-6 max-w-xl text-lg leading-relaxed text-white/65">
+            <p className="animate-fade-up mt-6 max-w-xl text-lg leading-relaxed text-navy/70">
               Traditional industrial leases lock you in for 3 years. Your business changes in 3 months.
-              Cubework gives you flex warehouse, office, parking, and yard space — <strong className="text-white/90">all-in pricing, no build-out, operational in 48 hours.</strong>
+              Cubework gives you flex warehouse, office, parking, and yard space — <strong className="text-navy">all-in pricing, no build-out, operational in 48 hours.</strong>
             </p>
 
             <div className="animate-fade-up mt-8 flex flex-wrap gap-3">
               <a
                 href="#search"
-                className="inline-flex items-center gap-2 rounded-sm bg-green px-7 py-3.5 font-display text-sm font-extrabold uppercase tracking-widest text-navy-dark shadow-lg shadow-green/30 transition-all hover:-translate-y-0.5 hover:bg-green-light"
+                className="inline-flex items-center gap-2 rounded-sm bg-green px-7 py-3.5 font-display text-sm font-extrabold uppercase tracking-widest text-white shadow-lg shadow-green/30 transition-all hover:-translate-y-0.5 hover:bg-green-dark"
               >
                 Find Space Near Me <ArrowRight className="h-4 w-4" />
               </a>
               <a
                 href="tel:8003386369"
-                className="inline-flex items-center gap-2 rounded-sm border border-white/30 px-7 py-3.5 font-display text-sm font-bold uppercase tracking-widest text-white transition-all hover:border-white hover:bg-white/5"
+                className="inline-flex items-center gap-2 rounded-sm border border-navy/25 px-7 py-3.5 font-display text-sm font-bold uppercase tracking-widest text-navy transition-all hover:border-navy hover:bg-navy/5"
               >
                 <Phone className="h-4 w-4" /> Talk to an Expert
               </a>
@@ -238,17 +238,17 @@ function HomePage() {
 
             <div className="animate-fade-up mt-12 grid grid-cols-2 gap-6 sm:grid-cols-4">
               {STATS.map((s) => (
-                <div key={s.label} className="border-l-2 border-green/50 pl-4">
-                  <div className="font-display text-3xl font-black leading-none text-white">
+                <div key={s.label} className="border-l-2 border-green pl-4">
+                  <div className="font-display text-3xl font-black leading-none text-navy">
                     {s.n.includes("+") || s.n.includes("M") ? (
                       <>
-                        <span className="text-green">{s.n}</span>
+                        <span className="text-green-dark">{s.n}</span>
                       </>
                     ) : (
                       s.n
                     )}
                   </div>
-                  <div className="mt-1 text-xs font-medium uppercase tracking-widest text-white/50">
+                  <div className="mt-1 text-xs font-medium uppercase tracking-widest text-navy/55">
                     {s.label}
                   </div>
                 </div>
@@ -313,7 +313,7 @@ function HomePage() {
                 </div>
               </div>
 
-              <button className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-md bg-navy py-3.5 font-display text-sm font-extrabold uppercase tracking-widest text-white transition-all hover:-translate-y-0.5 hover:bg-navy-mid">
+              <button className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-md bg-green py-3.5 font-display text-sm font-extrabold uppercase tracking-widest text-white transition-all hover:-translate-y-0.5 hover:bg-green-dark">
                 Search Available Space <ArrowRight className="h-4 w-4" />
               </button>
 
@@ -327,11 +327,11 @@ function HomePage() {
       </section>
 
       {/* TRUST BAR */}
-      <section className="border-y border-white/10 bg-navy py-5">
+      <section className="border-y border-border bg-secondary py-5">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-8 gap-y-3 px-6 lg:px-12">
           {TRUST.map(({ icon: Icon, text }) => (
-            <div key={text} className="flex items-center gap-2.5 text-sm font-medium text-white/65">
-              <Icon className="h-4 w-4 flex-shrink-0 text-green" />
+            <div key={text} className="flex items-center gap-2.5 text-sm font-medium text-navy/75">
+              <Icon className="h-4 w-4 flex-shrink-0 text-green-dark" />
               {text}
             </div>
           ))}
@@ -354,9 +354,9 @@ function HomePage() {
               fixes all three.
             </p>
 
-            <div className="mt-8 rounded-lg bg-navy p-7 text-white">
-              <div className="font-display text-5xl font-black leading-none text-green">$300K+</div>
-              <div className="mt-2 text-sm leading-relaxed text-white/60">
+            <div className="mt-8 rounded-lg bg-green p-7 text-white">
+              <div className="font-display text-5xl font-black leading-none text-white">$300K+</div>
+              <div className="mt-2 text-sm leading-relaxed text-white/85">
                 Average savings vs. traditional leasing on a 10,000 SF operation. No build-out. No
                 deposit. No NNN.
               </div>
@@ -387,37 +387,37 @@ function HomePage() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section id="how" className="relative overflow-hidden bg-navy-dark px-6 py-24 lg:px-12">
-        <div className="absolute inset-0 bg-grid opacity-40" />
+      <section id="how" className="relative overflow-hidden bg-white px-6 py-24 lg:px-12">
+        <div className="absolute inset-0 bg-grid opacity-50" />
         <div className="relative mx-auto max-w-7xl">
           <div className="mb-14 text-center">
-            <div className="mb-4 inline-flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-green">
+            <div className="mb-4 inline-flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-green-dark">
               <span className="block h-0.5 w-6 bg-green" /> How It Works
             </div>
-            <h2 className="font-display text-4xl font-black uppercase text-white md:text-5xl">
+            <h2 className="font-display text-4xl font-black uppercase text-navy md:text-5xl">
               From Search to Move-In
             </h2>
-            <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-green/25 bg-green/10 px-5 py-2 font-display text-sm font-bold uppercase tracking-widest text-green">
+            <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-green/30 bg-green/10 px-5 py-2 font-display text-sm font-bold uppercase tracking-widest text-green-dark">
               <Clock className="h-4 w-4" /> Inquiry to occupancy in as little as 48 hours
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-0.5 overflow-hidden rounded-lg bg-white/5 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-0.5 overflow-hidden rounded-lg bg-border md:grid-cols-3">
             {STEPS.map(({ n, icon: Icon, title, text }) => (
-              <div key={n} className="relative bg-navy-dark/80 p-10 transition-colors hover:bg-navy-mid/40">
-                <div className="absolute right-5 top-3 font-display text-7xl font-black leading-none text-white/[0.04]">
+              <div key={n} className="relative bg-white p-10 transition-colors hover:bg-secondary">
+                <div className="absolute right-5 top-3 font-display text-7xl font-black leading-none text-green/10">
                   {n}
                 </div>
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-md bg-green text-navy-dark">
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-md bg-green text-white">
                   <Icon className="h-5 w-5" />
                 </div>
-                <div className="text-[11px] font-semibold uppercase tracking-widest text-green">
+                <div className="text-[11px] font-semibold uppercase tracking-widest text-green-dark">
                   Step {n}
                 </div>
-                <h3 className="mt-1.5 font-display text-2xl font-extrabold uppercase tracking-wide text-white">
+                <h3 className="mt-1.5 font-display text-2xl font-extrabold uppercase tracking-wide text-navy">
                   {title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-white/55">{text}</p>
+                <p className="mt-3 text-sm leading-relaxed text-navy/65">{text}</p>
               </div>
             ))}
           </div>
@@ -525,16 +525,16 @@ function HomePage() {
       </section>
 
       {/* SOCIAL PROOF */}
-      <section className="relative overflow-hidden bg-navy px-6 py-24 lg:px-12">
+      <section className="relative overflow-hidden bg-secondary px-6 py-24 lg:px-12">
         <div className="relative mx-auto max-w-7xl">
           <div className="mb-14 text-center">
-            <div className="mb-4 inline-flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-green">
+            <div className="mb-4 inline-flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-green-dark">
               <span className="block h-0.5 w-6 bg-green" /> What Our Tenants Say
             </div>
-            <h2 className="font-display text-4xl font-black uppercase text-white md:text-5xl">
+            <h2 className="font-display text-4xl font-black uppercase text-navy md:text-5xl">
               Trusted by Operators &amp; Founders
             </h2>
-            <p className="mt-3 text-base text-white/50">
+            <p className="mt-3 text-base text-navy/60">
               From solo e-commerce sellers to Fortune 500 distribution teams
             </p>
           </div>
@@ -543,36 +543,36 @@ function HomePage() {
             {TESTIMONIALS.map((t) => (
               <div
                 key={t.name}
-                className="rounded-lg border border-white/10 bg-white/[0.04] p-7 transition-all hover:border-green/30 hover:bg-white/[0.07]"
+                className="rounded-lg border border-border bg-white p-7 transition-all hover:border-green hover:shadow-lg hover:shadow-green/10"
               >
                 <div className="mb-4 flex gap-0.5">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star key={i} className="h-4 w-4 fill-green text-green" />
                   ))}
                 </div>
-                <p className="text-[15px] italic leading-relaxed text-white/75">
+                <p className="text-[15px] italic leading-relaxed text-navy/80">
                   &ldquo;{t.quote}&rdquo;
                 </p>
                 <div className="mt-6 flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green font-display text-sm font-extrabold text-navy">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green font-display text-sm font-extrabold text-white">
                     {t.initials}
                   </div>
                   <div>
-                    <div className="font-display text-sm font-bold uppercase tracking-wide text-white">
+                    <div className="font-display text-sm font-bold uppercase tracking-wide text-navy">
                       {t.name}
                     </div>
-                    <div className="text-xs text-white/40">{t.role}</div>
+                    <div className="text-xs text-navy/50">{t.role}</div>
                   </div>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="mt-12 grid grid-cols-2 gap-0.5 overflow-hidden rounded-lg bg-white/5 md:grid-cols-4">
+          <div className="mt-12 grid grid-cols-2 gap-0.5 overflow-hidden rounded-lg bg-border md:grid-cols-4">
             {STATS.map((s) => (
-              <div key={s.label} className="bg-navy-dark/60 p-7 text-center">
-                <div className="font-display text-4xl font-black leading-none text-green">{s.n}</div>
-                <div className="mt-2 text-xs font-medium uppercase tracking-widest text-white/50">
+              <div key={s.label} className="bg-white p-7 text-center">
+                <div className="font-display text-4xl font-black leading-none text-green-dark">{s.n}</div>
+                <div className="mt-2 text-xs font-medium uppercase tracking-widest text-navy/60">
                   {s.label}
                 </div>
               </div>
@@ -582,19 +582,19 @@ function HomePage() {
       </section>
 
       {/* CTA */}
-      <section id="pricing" className="relative overflow-hidden bg-navy-dark px-6 py-28 lg:px-12">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_color-mix(in_oklab,var(--green)_15%,transparent),_transparent_70%)]" />
+      <section id="pricing" className="relative overflow-hidden bg-green px-6 py-28 lg:px-12">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.25),_transparent_70%)]" />
         <div className="relative mx-auto max-w-2xl text-center">
-          <div className="mb-5 inline-flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-green">
-            <span className="animate-pulse-dot h-1.5 w-1.5 rounded-full bg-green" />
+          <div className="mb-5 inline-flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-white">
+            <span className="animate-pulse-dot h-1.5 w-1.5 rounded-full bg-white" />
             Available This Week
           </div>
           <h2 className="font-display text-5xl font-black uppercase leading-[0.92] text-white text-balance md:text-6xl">
             Stop Negotiating Leases.
             <br />
-            <span className="text-green">Start Moving Freight.</span>
+            <span className="text-navy">Start Moving Freight.</span>
           </h2>
-          <p className="mt-5 text-base leading-relaxed text-white/55">
+          <p className="mt-5 text-base leading-relaxed text-white/85">
             Tour a space this week. Sign a flexible agreement. Move in by Friday. The opposite of
             traditional industrial real estate.
           </p>
@@ -602,13 +602,13 @@ function HomePage() {
           <div className="mt-10 flex flex-wrap justify-center gap-3">
             <a
               href="#search"
-              className="inline-flex items-center gap-2 rounded-md bg-green px-9 py-4 font-display text-base font-extrabold uppercase tracking-widest text-navy-dark shadow-xl shadow-green/30 transition-all hover:-translate-y-0.5 hover:bg-green-light"
+              className="inline-flex items-center gap-2 rounded-md bg-white px-9 py-4 font-display text-base font-extrabold uppercase tracking-widest text-green-dark shadow-xl shadow-navy/20 transition-all hover:-translate-y-0.5 hover:bg-secondary"
             >
               Find a Space <ArrowRight className="h-4 w-4" />
             </a>
             <a
               href="tel:8003386369"
-              className="inline-flex items-center gap-2 rounded-md border border-white/25 px-9 py-4 font-display text-base font-bold uppercase tracking-widest text-white transition-all hover:border-white hover:bg-white/5"
+              className="inline-flex items-center gap-2 rounded-md border border-white/60 px-9 py-4 font-display text-base font-bold uppercase tracking-widest text-white transition-all hover:border-white hover:bg-white/10"
             >
               <Phone className="h-4 w-4" /> 800-338-6369
             </a>

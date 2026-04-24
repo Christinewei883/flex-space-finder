@@ -4,7 +4,7 @@ import cubeworkLogo from "@/assets/cubework-logo.svg";
 
 export function SiteHeader() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-navy-dark/95 backdrop-blur">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-border bg-white/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-12">
         <Link to="/" className="flex items-center" aria-label="Cubework home">
           <img
@@ -26,7 +26,7 @@ export function SiteHeader() {
             <a
               key={label}
               href={href}
-              className="text-xs font-semibold uppercase tracking-widest text-white/70 transition-colors hover:text-green"
+              className="text-xs font-semibold uppercase tracking-widest text-navy/70 transition-colors hover:text-green-dark"
             >
               {label}
             </a>
@@ -36,14 +36,14 @@ export function SiteHeader() {
         <div className="flex items-center gap-3">
           <a
             href="tel:8003386369"
-            className="hidden items-center gap-2 text-sm font-semibold text-white/80 transition-colors hover:text-green md:flex"
+            className="hidden items-center gap-2 text-sm font-semibold text-navy/80 transition-colors hover:text-green-dark md:flex"
           >
             <Phone className="h-4 w-4" />
             800-338-6369
           </a>
           <a
             href="#search"
-            className="rounded-sm bg-green px-4 py-2 font-display text-xs font-extrabold uppercase tracking-widest text-navy-dark transition-all hover:bg-green-light"
+            className="rounded-sm bg-green px-4 py-2 font-display text-xs font-extrabold uppercase tracking-widest text-white transition-all hover:bg-green-dark"
           >
             Tour a Space →
           </a>
