@@ -29,19 +29,29 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Cubework — Flexible Warehouse Space. Move In This Week." },
+      {
+        name: "description",
+        content:
+          "Month-to-month warehouse, office, parking & yard space across 50+ locations in 22 states. All-in pricing. No build-out. Move in within 48 hours.",
+      },
+      { name: "author", content: "Cubework" },
+      { property: "og:title", content: "Cubework — Flexible Warehouse Space" },
+      {
+        property: "og:description",
+        content:
+          "50+ locations. 22 states. Flex terms, all-in pricing, 48-hour move-in. The opposite of a 3-year industrial lease.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: appCss,
+        href: "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap",
       },
     ],
   }),
