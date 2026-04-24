@@ -463,51 +463,144 @@ function HomePage() {
         </div>
       </section>
 
-      {/* SPACES */}
+      {/* SPACES — Saltbox-style tall cards */}
       <section id="spaces" className="bg-secondary px-6 py-24 lg:px-12">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 flex flex-wrap items-end justify-between gap-4">
             <div>
               <div className="mb-3 inline-flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-green">
-                <span className="block h-0.5 w-6 bg-green" /> Space Types
+                <span className="block h-0.5 w-6 bg-green" /> Our Spaces
               </div>
               <h2 className="font-display text-4xl font-black uppercase text-navy md:text-5xl">
-                Everything Under One Agreement
+                Real space. Real photos. Move-in ready.
               </h2>
+              <p className="mt-3 max-w-xl text-base text-navy/60">
+                Every facility is operational the day you sign — power on, doors open, dock plates ready.
+              </p>
             </div>
             <a href="#" className="inline-flex items-center gap-1.5 font-display text-sm font-bold uppercase tracking-widest text-green-dark hover:text-green">
-              View All Services <ArrowRight className="h-4 w-4" />
+              View All Spaces <ArrowRight className="h-4 w-4" />
             </a>
           </div>
 
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {SPACES.map((s) => (
               <div
                 key={s.title}
-                className="group cursor-pointer overflow-hidden rounded-lg border border-transparent bg-white transition-all hover:-translate-y-1 hover:border-green hover:shadow-xl hover:shadow-navy/10"
+                className="group flex cursor-pointer flex-col overflow-hidden rounded-xl border border-border bg-white transition-all hover:-translate-y-1.5 hover:border-green hover:shadow-2xl hover:shadow-navy/10"
               >
-                <div className="relative h-44 overflow-hidden">
+                <div className="relative aspect-[4/5] overflow-hidden">
                   <img
                     src={s.img}
                     alt={s.title}
-                    width={1024}
-                    height={768}
+                    width={900}
+                    height={1125}
                     loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/70 to-transparent" />
-                </div>
-                <div className="p-5">
-                  <h3 className="font-display text-lg font-extrabold uppercase tracking-wide text-navy">
-                    {s.title}
-                  </h3>
-                  <div className="mt-1 text-xs font-semibold uppercase tracking-wider text-green-dark">
-                    {s.range}
+                  <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-navy/70 via-navy/20 to-transparent" />
+                  <div className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1 font-display text-[10px] font-bold uppercase tracking-widest text-green-dark shadow-sm">
+                    <span className="h-1.5 w-1.5 rounded-full bg-green" /> Available
                   </div>
-                  <p className="mt-2.5 text-[13px] leading-relaxed text-muted-foreground">{s.text}</p>
+                  <div className="absolute inset-x-4 bottom-4">
+                    <div className="font-display text-[11px] font-bold uppercase tracking-widest text-white/85">
+                      {s.range}
+                    </div>
+                    <h3 className="mt-1 font-display text-xl font-extrabold uppercase leading-tight tracking-wide text-white">
+                      {s.title}
+                    </h3>
+                  </div>
+                </div>
+                <div className="flex flex-1 flex-col p-5">
+                  <p className="text-[13px] leading-relaxed text-muted-foreground">{s.text}</p>
+                  <ul className="mt-4 space-y-1.5">
+                    {s.features.map((f) => (
+                      <li key={f} className="flex items-center gap-2 text-[12px] text-navy/75">
+                        <CheckCircle2 className="h-3.5 w-3.5 flex-shrink-0 text-green" />
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                  <a
+                    href="#search"
+                    className="mt-5 inline-flex items-center justify-between gap-2 border-t border-border pt-4 font-display text-xs font-bold uppercase tracking-widest text-navy transition-colors group-hover:text-green-dark"
+                  >
+                    Tour this space <ArrowRight className="h-3.5 w-3.5" />
+                  </a>
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TOUR — ReadySpaces-style alternating gallery */}
+      <section className="bg-white px-6 py-24 lg:px-12">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-16 max-w-2xl">
+            <div className="mb-3 inline-flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-green">
+              <span className="block h-0.5 w-6 bg-green" /> Tour Our Spaces
+            </div>
+            <h2 className="font-display text-4xl font-black uppercase leading-[0.95] text-navy md:text-5xl">
+              See exactly what you're moving into.
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-navy/60">
+              No staged renderings. These are the actual buildings, doors, racks, and yards waiting for your team.
+            </p>
+          </div>
+
+          <div className="space-y-20">
+            {TOUR.map((item, i) => (
+              <div
+                key={item.title}
+                className={`grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16 ${
+                  i % 2 === 1 ? "lg:[&>div:first-child]:order-2" : ""
+                }`}
+              >
+                <div className="relative">
+                  <div className="overflow-hidden rounded-xl shadow-2xl shadow-navy/10">
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      width={1200}
+                      height={900}
+                      loading="lazy"
+                      className="aspect-[4/3] h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                    />
+                  </div>
+                  <div className="absolute -bottom-4 -left-4 hidden h-24 w-24 rounded-xl border-4 border-white bg-green md:block" />
+                </div>
+
+                <div>
+                  <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-green/30 bg-green/10 px-3 py-1 font-display text-[11px] font-bold uppercase tracking-widest text-green-dark">
+                    {item.eyebrow}
+                  </div>
+                  <h3 className="font-display text-3xl font-black uppercase leading-tight tracking-tight text-navy md:text-4xl">
+                    {item.title}
+                  </h3>
+                  <p className="mt-4 text-base leading-relaxed text-navy/70">{item.text}</p>
+                  <ul className="mt-6 space-y-3">
+                    {item.bullets.map((b) => (
+                      <li key={b} className="flex items-start gap-3 text-[15px] text-navy/80">
+                        <span className="mt-1.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-green/15">
+                          <CheckCircle2 className="h-3.5 w-3.5 text-green-dark" />
+                        </span>
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-16 flex justify-center">
+            <a
+              href="#search"
+              className="inline-flex items-center gap-2 rounded-md bg-navy px-7 py-3.5 font-display text-sm font-extrabold uppercase tracking-widest text-white transition-all hover:-translate-y-0.5 hover:bg-navy-dark"
+            >
+              Schedule a Tour <ArrowRight className="h-4 w-4" />
+            </a>
           </div>
         </div>
       </section>
