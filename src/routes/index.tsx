@@ -159,15 +159,18 @@ const TOUR = [
 ];
 
 const LOCATIONS = [
-  { state: "California", name: "Los Angeles Basin", count: "10 facilities" },
-  { state: "California", name: "Inland Empire", count: "4 facilities" },
-  { state: "Texas", name: "Houston", count: "2 facilities" },
-  { state: "Texas", name: "DFW Metro", count: "2 facilities" },
-  { state: "Georgia", name: "Atlanta Metro", count: "3 facilities" },
-  { state: "Georgia", name: "Savannah / Pooler", count: "2 facilities" },
-  { state: "Illinois", name: "Chicago Metro", count: "3 facilities" },
-  { state: "Arizona", name: "Phoenix & Tucson", count: "3 facilities" },
-  { state: "Washington", name: "Seattle / Kent", count: "2 facilities" },
+  { state: "California", name: "Fontana", address: "Fontana, CA, 92337", img: locFontana },
+  { state: "California", name: "Torrance", address: "Torrance, CA, 90501", img: locTorrance },
+  { state: "California", name: "Santa Ana", address: "Santa Ana, CA, 92707", img: locSantaAna },
+  { state: "California", name: "Hayward", address: "Hayward, CA, 94544", img: locHayward },
+  { state: "Arizona", name: "Glendale", address: "Glendale, AZ, 85355", img: locGlendale },
+  { state: "Arizona", name: "Tolleson", address: "Tolleson, AZ, 85353", img: locTolleson },
+  { state: "Texas", name: "Houston", address: "Houston, TX, 77038", img: locHouston },
+  { state: "Texas", name: "Dallas", address: "Dallas, TX, 75212", img: locDallas },
+  { state: "Georgia", name: "Atlanta", address: "Atlanta, GA, 30336", img: locAtlanta },
+  { state: "Illinois", name: "Chicago", address: "Bedford Park, IL, 60638", img: locChicago },
+  { state: "Washington", name: "Kent", address: "Kent, WA, 98032", img: locKent },
+  { state: "Arkansas", name: "Little Rock", address: "Little Rock, AR, 72209", img: locLittleRock },
 ];
 
 const TESTIMONIALS = [
