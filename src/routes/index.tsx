@@ -190,47 +190,47 @@ function HomePage() {
       <SiteHeader />
 
       {/* HERO */}
-      <section className="relative flex min-h-screen items-center overflow-hidden bg-navy-dark pt-16">
+      <section className="relative flex min-h-screen items-center overflow-hidden bg-white pt-16">
         <img
           src={heroWarehouse}
           alt="Aerial view of Cubework industrial warehouse facility with loading docks and trailer yard"
           width={1920}
           height={1080}
-          className="absolute inset-0 h-full w-full object-cover opacity-40"
+          className="absolute inset-0 h-full w-full object-cover opacity-15"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-dark via-navy-dark/85 to-navy-dark/40" />
-        <div className="absolute inset-0 bg-grid opacity-60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/40" />
+        <div className="absolute inset-0 bg-grid opacity-50" />
 
         <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-16 px-6 py-20 lg:grid-cols-[1fr_440px] lg:px-12">
           <div>
-            <div className="animate-fade-up mb-6 inline-flex items-center gap-2 rounded-sm border border-green/30 bg-green/10 px-3.5 py-1.5 font-display text-xs font-bold uppercase tracking-widest text-green">
+            <div className="animate-fade-up mb-6 inline-flex items-center gap-2 rounded-sm border border-green/30 bg-green/10 px-3.5 py-1.5 font-display text-xs font-bold uppercase tracking-widest text-green-dark">
               <span className="animate-pulse-dot h-1.5 w-1.5 rounded-full bg-green" />
               50 Locations · 22 States · Move-In Ready
             </div>
 
-            <h1 className="animate-fade-up font-display text-5xl font-black uppercase leading-[0.92] tracking-tight text-white text-balance md:text-7xl xl:text-8xl">
+            <h1 className="animate-fade-up font-display text-5xl font-black uppercase leading-[0.92] tracking-tight text-navy text-balance md:text-7xl xl:text-8xl">
               Warehouse Space
               <br />
               That Moves
               <br />
-              <span className="text-green">With Your Business.</span>
+              <span className="text-green-dark">With Your Business.</span>
             </h1>
 
-            <p className="animate-fade-up mt-6 max-w-xl text-lg leading-relaxed text-white/65">
+            <p className="animate-fade-up mt-6 max-w-xl text-lg leading-relaxed text-navy/70">
               Traditional industrial leases lock you in for 3 years. Your business changes in 3 months.
-              Cubework gives you flex warehouse, office, parking, and yard space — <strong className="text-white/90">all-in pricing, no build-out, operational in 48 hours.</strong>
+              Cubework gives you flex warehouse, office, parking, and yard space — <strong className="text-navy">all-in pricing, no build-out, operational in 48 hours.</strong>
             </p>
 
             <div className="animate-fade-up mt-8 flex flex-wrap gap-3">
               <a
                 href="#search"
-                className="inline-flex items-center gap-2 rounded-sm bg-green px-7 py-3.5 font-display text-sm font-extrabold uppercase tracking-widest text-navy-dark shadow-lg shadow-green/30 transition-all hover:-translate-y-0.5 hover:bg-green-light"
+                className="inline-flex items-center gap-2 rounded-sm bg-green px-7 py-3.5 font-display text-sm font-extrabold uppercase tracking-widest text-white shadow-lg shadow-green/30 transition-all hover:-translate-y-0.5 hover:bg-green-dark"
               >
                 Find Space Near Me <ArrowRight className="h-4 w-4" />
               </a>
               <a
                 href="tel:8003386369"
-                className="inline-flex items-center gap-2 rounded-sm border border-white/30 px-7 py-3.5 font-display text-sm font-bold uppercase tracking-widest text-white transition-all hover:border-white hover:bg-white/5"
+                className="inline-flex items-center gap-2 rounded-sm border border-navy/25 px-7 py-3.5 font-display text-sm font-bold uppercase tracking-widest text-navy transition-all hover:border-navy hover:bg-navy/5"
               >
                 <Phone className="h-4 w-4" /> Talk to an Expert
               </a>
@@ -238,17 +238,17 @@ function HomePage() {
 
             <div className="animate-fade-up mt-12 grid grid-cols-2 gap-6 sm:grid-cols-4">
               {STATS.map((s) => (
-                <div key={s.label} className="border-l-2 border-green/50 pl-4">
-                  <div className="font-display text-3xl font-black leading-none text-white">
+                <div key={s.label} className="border-l-2 border-green pl-4">
+                  <div className="font-display text-3xl font-black leading-none text-navy">
                     {s.n.includes("+") || s.n.includes("M") ? (
                       <>
-                        <span className="text-green">{s.n}</span>
+                        <span className="text-green-dark">{s.n}</span>
                       </>
                     ) : (
                       s.n
                     )}
                   </div>
-                  <div className="mt-1 text-xs font-medium uppercase tracking-widest text-white/50">
+                  <div className="mt-1 text-xs font-medium uppercase tracking-widest text-navy/55">
                     {s.label}
                   </div>
                 </div>
