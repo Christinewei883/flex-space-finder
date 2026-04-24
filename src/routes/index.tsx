@@ -197,13 +197,13 @@ function HomePage() {
       <section className="relative flex min-h-screen items-center overflow-hidden bg-white pt-16">
         <img
           src={heroWarehouse}
-          alt="Aerial view of Cubework industrial warehouse facility with loading docks and trailer yard"
+          alt="Inside a Cubework warehouse with high ceilings, racking, and dock-high loading"
           width={1920}
           height={1080}
-          className="absolute inset-0 h-full w-full object-cover opacity-15"
+          className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/40" />
-        <div className="absolute inset-0 bg-grid opacity-50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/92 to-white/30" />
+        <div className="absolute inset-0 bg-grid opacity-40" />
 
         <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-16 px-6 py-20 lg:grid-cols-[1fr_440px] lg:px-12">
           <div>
