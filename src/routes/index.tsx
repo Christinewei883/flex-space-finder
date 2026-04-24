@@ -313,7 +313,7 @@ function HomePage() {
                 </div>
               </div>
 
-              <button className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-md bg-navy py-3.5 font-display text-sm font-extrabold uppercase tracking-widest text-white transition-all hover:-translate-y-0.5 hover:bg-navy-mid">
+              <button className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-md bg-green py-3.5 font-display text-sm font-extrabold uppercase tracking-widest text-white transition-all hover:-translate-y-0.5 hover:bg-green-dark">
                 Search Available Space <ArrowRight className="h-4 w-4" />
               </button>
 
