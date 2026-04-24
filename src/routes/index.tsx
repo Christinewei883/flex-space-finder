@@ -354,9 +354,9 @@ function HomePage() {
               fixes all three.
             </p>
 
-            <div className="mt-8 rounded-lg bg-navy p-7 text-white">
-              <div className="font-display text-5xl font-black leading-none text-green">$300K+</div>
-              <div className="mt-2 text-sm leading-relaxed text-white/60">
+            <div className="mt-8 rounded-lg bg-green p-7 text-white">
+              <div className="font-display text-5xl font-black leading-none text-white">$300K+</div>
+              <div className="mt-2 text-sm leading-relaxed text-white/85">
                 Average savings vs. traditional leasing on a 10,000 SF operation. No build-out. No
                 deposit. No NNN.
               </div>
