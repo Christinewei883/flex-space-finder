@@ -520,6 +520,65 @@ function HomePage() {
         </div>
       </section>
 
+      <IndustriesSlider />
+
+      {/* SOCIAL PROOF */}
+      <section className="relative overflow-hidden bg-secondary px-6 py-24 lg:px-12">
+        <div className="relative mx-auto max-w-7xl">
+          <div className="mb-14 text-center">
+            <div className="mb-4 inline-flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-green-dark">
+              <span className="block h-0.5 w-6 bg-green" /> What Our Tenants Say
+            </div>
+            <h2 className="font-display text-4xl font-black uppercase text-navy md:text-5xl">
+              Trusted by Operators &amp; Founders
+            </h2>
+            <p className="mt-3 text-base text-navy/60">
+              From solo e-commerce sellers to Fortune 500 distribution teams
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+            {TESTIMONIALS.map((t) => (
+              <div
+                key={t.name}
+                className="rounded-lg border border-border bg-white p-7 transition-all hover:border-green hover:shadow-lg hover:shadow-green/10"
+              >
+                <div className="mb-4 flex gap-0.5">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className="h-4 w-4 fill-green text-green" />
+                  ))}
+                </div>
+                <p className="text-[15px] italic leading-relaxed text-navy/80">
+                  &ldquo;{t.quote}&rdquo;
+                </p>
+                <div className="mt-6 flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green font-display text-sm font-extrabold text-white">
+                    {t.initials}
+                  </div>
+                  <div>
+                    <div className="font-display text-sm font-bold uppercase tracking-wide text-navy">
+                      {t.name}
+                    </div>
+                    <div className="text-xs text-navy/50">{t.role}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 grid grid-cols-2 gap-0.5 overflow-hidden rounded-lg bg-border md:grid-cols-4">
+            {STATS.map((s) => (
+              <div key={s.label} className="bg-white p-7 text-center">
+                <div className="font-display text-4xl font-black leading-none text-green-dark">{s.n}</div>
+                <div className="mt-2 text-xs font-medium uppercase tracking-widest text-navy/60">
+                  {s.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* TOUR — ReadySpaces-style alternating gallery */}
       <section className="bg-white px-6 py-24 lg:px-12">
         <div className="mx-auto max-w-7xl">
@@ -587,65 +646,6 @@ function HomePage() {
             >
               Schedule a Tour <ArrowRight className="h-4 w-4" />
             </a>
-          </div>
-        </div>
-      </section>
-
-      <IndustriesSlider />
-
-      {/* SOCIAL PROOF */}
-      <section className="relative overflow-hidden bg-secondary px-6 py-24 lg:px-12">
-        <div className="relative mx-auto max-w-7xl">
-          <div className="mb-14 text-center">
-            <div className="mb-4 inline-flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-green-dark">
-              <span className="block h-0.5 w-6 bg-green" /> What Our Tenants Say
-            </div>
-            <h2 className="font-display text-4xl font-black uppercase text-navy md:text-5xl">
-              Trusted by Operators &amp; Founders
-            </h2>
-            <p className="mt-3 text-base text-navy/60">
-              From solo e-commerce sellers to Fortune 500 distribution teams
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-            {TESTIMONIALS.map((t) => (
-              <div
-                key={t.name}
-                className="rounded-lg border border-border bg-white p-7 transition-all hover:border-green hover:shadow-lg hover:shadow-green/10"
-              >
-                <div className="mb-4 flex gap-0.5">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-green text-green" />
-                  ))}
-                </div>
-                <p className="text-[15px] italic leading-relaxed text-navy/80">
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-                <div className="mt-6 flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green font-display text-sm font-extrabold text-white">
-                    {t.initials}
-                  </div>
-                  <div>
-                    <div className="font-display text-sm font-bold uppercase tracking-wide text-navy">
-                      {t.name}
-                    </div>
-                    <div className="text-xs text-navy/50">{t.role}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-12 grid grid-cols-2 gap-0.5 overflow-hidden rounded-lg bg-border md:grid-cols-4">
-            {STATS.map((s) => (
-              <div key={s.label} className="bg-white p-7 text-center">
-                <div className="font-display text-4xl font-black leading-none text-green-dark">{s.n}</div>
-                <div className="mt-2 text-xs font-medium uppercase tracking-widest text-navy/60">
-                  {s.label}
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
