@@ -109,7 +109,7 @@ export function IndustriesSlider() {
   const go = (i: number) => setIndex(Math.max(0, Math.min(totalPages - 1, i)));
 
   return (
-    <section className="bg-secondary px-6 py-24 lg:px-12">
+    <section className="bg-white px-6 py-24 lg:px-12">
       <div className="mx-auto max-w-7xl">
         <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-2xl">
