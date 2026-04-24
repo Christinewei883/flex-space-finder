@@ -579,6 +579,77 @@ function HomePage() {
         </div>
       </section>
 
+      {/* TOUR — ReadySpaces-style alternating gallery */}
+      <section className="bg-white px-6 py-24 lg:px-12">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-16 max-w-2xl">
+            <div className="mb-3 inline-flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-green">
+              <span className="block h-0.5 w-6 bg-green" /> Tour Our Spaces
+            </div>
+            <h2 className="font-display text-4xl font-black uppercase leading-[0.95] text-navy md:text-5xl">
+              See exactly what you're moving into.
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-navy/60">
+              No staged renderings. These are the actual buildings, doors, racks, and yards waiting for your team.
+            </p>
+          </div>
+
+          <div className="space-y-20">
+            {TOUR.map((item, i) => (
+              <div
+                key={item.title}
+                className={`grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16 ${
+                  i % 2 === 1 ? "lg:[&>div:first-child]:order-2" : ""
+                }`}
+              >
+                <div className="relative">
+                  <div className="overflow-hidden rounded-xl shadow-2xl shadow-navy/10">
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      width={1200}
+                      height={900}
+                      loading="lazy"
+                      className="aspect-[4/3] h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                    />
+                  </div>
+                  <div className="absolute -bottom-4 -left-4 hidden h-24 w-24 rounded-xl border-4 border-white bg-green md:block" />
+                </div>
+
+                <div>
+                  <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-green/30 bg-green/10 px-3 py-1 font-display text-[11px] font-bold uppercase tracking-widest text-green-dark">
+                    {item.eyebrow}
+                  </div>
+                  <h3 className="font-display text-3xl font-black uppercase leading-tight tracking-tight text-navy md:text-4xl">
+                    {item.title}
+                  </h3>
+                  <p className="mt-4 text-base leading-relaxed text-navy/70">{item.text}</p>
+                  <ul className="mt-6 space-y-3">
+                    {item.bullets.map((b) => (
+                      <li key={b} className="flex items-start gap-3 text-[15px] text-navy/80">
+                        <span className="mt-1.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-green/15">
+                          <CheckCircle2 className="h-3.5 w-3.5 text-green-dark" />
+                        </span>
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-16 flex justify-center">
+            <a
+              href="#search"
+              className="inline-flex items-center gap-2 rounded-md bg-navy px-7 py-3.5 font-display text-sm font-extrabold uppercase tracking-widest text-white transition-all hover:-translate-y-0.5 hover:bg-navy-dark"
+            >
+              Schedule a Tour <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section id="pricing" className="relative overflow-hidden bg-green px-6 py-28 lg:px-12">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.25),_transparent_70%)]" />
