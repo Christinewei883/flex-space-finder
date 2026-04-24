@@ -21,6 +21,7 @@ import spaceWarehouse from "@/assets/real-warehouse-interior.jpg";
 import spaceYard from "@/assets/real-forklift-warehouse.jpg";
 import spaceOffice from "@/assets/real-coworking-lounge.jpg";
 import spaceStudio from "@/assets/space-studio.jpg";
+import cubeworkLogo from "@/assets/cubework-logo.svg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -627,7 +628,6 @@ function HomePage() {
                 width={172}
                 height={28}
               />
-            </div>
               <p className="mt-4 text-sm leading-relaxed text-white/40">
                 Flexible warehouse, office, parking, and yard space across 50+ locations in 22 states.
               </p>
