@@ -355,6 +355,53 @@ function HomePage() {
         </div>
       </section>
 
+      {/* LOCATIONS — horizontal pill strip */}
+      <section id="locations" className="border-b border-border bg-white">
+        <div className="mx-auto max-w-7xl px-6 py-8 lg:px-12">
+          <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+            <div className="flex items-center gap-3">
+              <span className="font-display text-[11px] font-bold uppercase tracking-widest text-green-dark">
+                <MapPin className="mr-1.5 inline h-3.5 w-3.5" /> 50 Locations · 22 States
+              </span>
+              <span className="hidden text-sm text-muted-foreground sm:inline">
+                Find space in your market
+              </span>
+            </div>
+            <a
+              href="#"
+              className="inline-flex items-center gap-1.5 font-display text-xs font-bold uppercase tracking-widest text-green-dark transition-colors hover:text-green"
+            >
+              View all locations <ArrowRight className="h-3.5 w-3.5" />
+            </a>
+          </div>
+
+          <div className="-mx-6 overflow-x-auto px-6 lg:-mx-12 lg:px-12">
+            <div className="flex gap-2 pb-1">
+              {LOCATIONS.map((l) => (
+                <button
+                  key={l.name}
+                  className="group flex flex-shrink-0 items-center gap-2 rounded-full border border-border bg-secondary px-4 py-2 transition-all hover:-translate-y-0.5 hover:border-green hover:bg-white hover:shadow-md"
+                >
+                  <MapPin className="h-3.5 w-3.5 flex-shrink-0 text-green-dark" />
+                  <span className="font-display text-sm font-bold uppercase tracking-wide text-navy whitespace-nowrap">
+                    {l.name}
+                  </span>
+                  <span className="rounded-full bg-green/15 px-2 py-0.5 text-[10px] font-bold text-green-dark whitespace-nowrap">
+                    {l.count}
+                  </span>
+                </button>
+              ))}
+              <button className="flex flex-shrink-0 items-center gap-2 rounded-full border border-dashed border-border bg-white px-4 py-2 transition-all hover:border-green hover:bg-secondary">
+                <span className="font-display text-sm font-bold uppercase tracking-wide text-navy whitespace-nowrap">
+                  + 12 More States
+                </span>
+                <ArrowRight className="h-3.5 w-3.5 text-green-dark" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* WHY */}
       <section className="bg-white px-6 py-24 lg:px-12">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-16 lg:grid-cols-[380px_1fr]">
@@ -544,56 +591,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* LOCATIONS */}
       <IndustriesSlider />
-
-      <section id="locations" className="bg-white px-6 py-24 lg:px-12">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-12 flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <div className="mb-3 inline-flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-green">
-                <span className="block h-0.5 w-6 bg-green" /> Locations
-              </div>
-              <h2 className="font-display text-4xl font-black uppercase text-navy md:text-5xl">
-                50 Locations · 22 States
-              </h2>
-            </div>
-            <a href="#" className="inline-flex items-center gap-1.5 font-display text-sm font-bold uppercase tracking-widest text-green-dark hover:text-green">
-              View All Locations <ArrowRight className="h-4 w-4" />
-            </a>
-          </div>
-
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
-            {LOCATIONS.map((l) => (
-              <button
-                key={l.name}
-                className="group cursor-pointer rounded-lg border border-transparent bg-secondary p-5 text-left transition-all hover:border-green hover:bg-white hover:shadow-md"
-              >
-                <div className="text-[11px] font-semibold uppercase tracking-widest text-green-dark">
-                  {l.state}
-                </div>
-                <div className="mt-1 font-display text-base font-extrabold uppercase text-navy">
-                  {l.name}
-                </div>
-                <div className="mt-1.5 inline-flex items-center gap-1.5 text-[11px] font-semibold text-green-dark">
-                  <span className="h-1.5 w-1.5 rounded-full bg-green-dark" /> {l.count}
-                </div>
-              </button>
-            ))}
-            <button className="group cursor-pointer rounded-lg border border-dashed border-border bg-white p-5 text-left transition-all hover:border-green">
-              <div className="font-display text-base font-extrabold uppercase text-navy">
-                + 12 More States
-              </div>
-              <div className="mt-1.5 text-[11px] text-muted-foreground">
-                NJ · OR · NV · CO · UT · MO · TN · SC · PA · IN
-              </div>
-              <div className="mt-2 inline-flex items-center gap-1 font-display text-xs font-bold uppercase tracking-widest text-green-dark group-hover:text-green">
-                View all <ArrowRight className="h-3 w-3" />
-              </div>
-            </button>
-          </div>
-        </div>
-      </section>
 
       {/* SOCIAL PROOF */}
       <section className="relative overflow-hidden bg-secondary px-6 py-24 lg:px-12">
