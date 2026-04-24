@@ -16,10 +16,10 @@ import {
 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { IndustriesSlider } from "@/components/IndustriesSlider";
-import heroWarehouse from "@/assets/hero-warehouse.jpg";
-import spaceWarehouse from "@/assets/space-warehouse.jpg";
-import spaceYard from "@/assets/space-yard.jpg";
-import spaceOffice from "@/assets/space-office.jpg";
+import heroWarehouse from "@/assets/real-warehouse-exterior.jpg";
+import spaceWarehouse from "@/assets/real-warehouse-interior.jpg";
+import spaceYard from "@/assets/real-forklift-warehouse.jpg";
+import spaceOffice from "@/assets/real-coworking-lounge.jpg";
 import spaceStudio from "@/assets/space-studio.jpg";
 
 export const Route = createFileRoute("/")({
