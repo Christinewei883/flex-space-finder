@@ -15,6 +15,7 @@ import {
   Zap,
 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
+import { IndustriesSlider } from "@/components/IndustriesSlider";
 import heroWarehouse from "@/assets/hero-warehouse.jpg";
 import spaceWarehouse from "@/assets/space-warehouse.jpg";
 import spaceYard from "@/assets/space-yard.jpg";
@@ -472,6 +473,8 @@ function HomePage() {
       </section>
 
       {/* LOCATIONS */}
+      <IndustriesSlider />
+
       <section id="locations" className="bg-white px-6 py-24 lg:px-12">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 flex flex-wrap items-end justify-between gap-4">
