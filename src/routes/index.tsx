@@ -24,6 +24,18 @@ import tourAisle from "@/assets/space-warehouse-3.webp";
 import tourCommunity from "@/assets/space-community.webp";
 import tourSecurity from "@/assets/space-warehouse-4.webp";
 import cubeworkLogo from "@/assets/cubework-logo.svg";
+import locFontana from "@/assets/loc-fontana.jpg";
+import locTorrance from "@/assets/loc-torrance.jpg";
+import locSantaAna from "@/assets/loc-santaana.jpg";
+import locHayward from "@/assets/loc-hayward.jpg";
+import locGlendale from "@/assets/loc-glendale.jpg";
+import locTolleson from "@/assets/loc-tolleson.jpg";
+import locHouston from "@/assets/loc-houston.jpg";
+import locDallas from "@/assets/loc-dallas.jpg";
+import locAtlanta from "@/assets/loc-atlanta.jpg";
+import locChicago from "@/assets/loc-chicago.jpg";
+import locKent from "@/assets/loc-kent.jpg";
+import locLittleRock from "@/assets/loc-littlerock.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
