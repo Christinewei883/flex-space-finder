@@ -36,7 +36,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-3">
           <a
             href="tel:8003386369"
-            className="hidden items-center gap-2 text-sm font-semibold text-white/80 transition-colors hover:text-green md:flex"
+            className="hidden items-center gap-2 text-sm font-semibold text-navy/80 transition-colors hover:text-green-dark md:flex"
           >
             <Phone className="h-4 w-4" />
             800-338-6369
