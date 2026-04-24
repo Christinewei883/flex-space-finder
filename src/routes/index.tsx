@@ -8,10 +8,8 @@ import {
   MapPin,
   Phone,
   Shield,
-  Sparkles,
   Star,
   Truck,
-  Warehouse,
   Zap,
 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
