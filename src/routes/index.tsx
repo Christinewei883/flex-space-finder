@@ -97,26 +97,6 @@ const WHY = [
   },
 ];
 
-const STEPS = [
-  {
-    n: "01",
-    icon: MapPin,
-    title: "Tell us what you need",
-    text: "Square footage, location, timeline, dock requirements. We match you with the right facility within hours.",
-  },
-  {
-    n: "02",
-    icon: Warehouse,
-    title: "Tour the space",
-    text: "In-person or virtual, same-day available. See the docks, power, ceiling heights — decide on the spot.",
-  },
-  {
-    n: "03",
-    icon: Sparkles,
-    title: "Sign & move in",
-    text: "Digital agreement. Card, ACH, or wire. Keys and QR access codes same day. Start moving freight.",
-  },
-];
 
 const SPACES = [
   {
@@ -424,45 +404,6 @@ function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* HOW IT WORKS */}
-      <section id="how" className="relative overflow-hidden bg-white px-6 py-24 lg:px-12">
-        <div className="absolute inset-0 bg-grid opacity-50" />
-        <div className="relative mx-auto max-w-7xl">
-          <div className="mb-14 text-center">
-            <div className="mb-4 inline-flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-green-dark">
-              <span className="block h-0.5 w-6 bg-green" /> How It Works
-            </div>
-            <h2 className="font-display text-4xl font-black uppercase text-navy md:text-5xl">
-              From Search to Move-In
-            </h2>
-            <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-green/30 bg-green/10 px-5 py-2 font-display text-sm font-bold uppercase tracking-widest text-green-dark">
-              <Clock className="h-4 w-4" /> Inquiry to occupancy in as little as 48 hours
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 gap-0.5 overflow-hidden rounded-lg bg-border md:grid-cols-3">
-            {STEPS.map(({ n, icon: Icon, title, text }) => (
-              <div key={n} className="relative bg-white p-10 transition-colors hover:bg-secondary">
-                <div className="absolute right-5 top-3 font-display text-7xl font-black leading-none text-green/10">
-                  {n}
-                </div>
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-md bg-green text-white">
-                  <Icon className="h-5 w-5" />
-                </div>
-                <div className="text-[11px] font-semibold uppercase tracking-widest text-green-dark">
-                  Step {n}
-                </div>
-                <h3 className="mt-1.5 font-display text-2xl font-extrabold uppercase tracking-wide text-navy">
-                  {title}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-navy/65">{text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* SPACES — Saltbox-style tall cards */}
       <section id="spaces" className="bg-secondary px-6 py-24 lg:px-12">
         <div className="mx-auto max-w-7xl">
