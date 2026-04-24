@@ -16,11 +16,12 @@ import {
 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { IndustriesSlider } from "@/components/IndustriesSlider";
-import heroWarehouse from "@/assets/hero-warehouse.jpg";
-import spaceWarehouse from "@/assets/space-warehouse.jpg";
-import spaceYard from "@/assets/space-yard.jpg";
-import spaceOffice from "@/assets/space-office.jpg";
+import heroWarehouse from "@/assets/real-warehouse-exterior.jpg";
+import spaceWarehouse from "@/assets/real-warehouse-interior.jpg";
+import spaceYard from "@/assets/real-forklift-warehouse.jpg";
+import spaceOffice from "@/assets/real-coworking-lounge.jpg";
 import spaceStudio from "@/assets/space-studio.jpg";
+import cubeworkLogo from "@/assets/cubework-logo.svg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -128,9 +129,9 @@ const SPACES = [
   },
   {
     img: spaceYard,
-    title: "Truck & Container Yards",
+    title: "Forklift & Yard Ops",
     range: "Single trailer to fleet",
-    text: "Truck, trailer, and container storage. Overnight parking with driver amenities. Built for transportation.",
+    text: "Forklift-ready bays, truck, trailer, and container storage. Overnight parking with driver amenities.",
   },
   {
     img: spaceStudio,
@@ -620,17 +621,13 @@ function HomePage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 gap-12 md:grid-cols-[280px_1fr]">
             <div>
-              <div className="flex items-center gap-2.5">
-                <div className="grid h-8 w-8 grid-cols-2 gap-[3px] rounded-sm bg-green p-1.5">
-                  <span className="rounded-[1px] bg-navy-dark" />
-                  <span className="rounded-[1px] bg-navy-dark" />
-                  <span className="rounded-[1px] bg-navy-dark" />
-                  <span className="rounded-[1px] bg-navy-dark" />
-                </div>
-                <span className="font-display text-xl font-extrabold uppercase tracking-wider text-white">
-                  Cubework
-                </span>
-              </div>
+              <img
+                src={cubeworkLogo}
+                alt="Cubework"
+                className="h-7 w-auto"
+                width={172}
+                height={28}
+              />
               <p className="mt-4 text-sm leading-relaxed text-white/40">
                 Flexible warehouse, office, parking, and yard space across 50+ locations in 22 states.
               </p>
