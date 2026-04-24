@@ -113,7 +113,7 @@ export function IndustriesSlider() {
       <div className="mx-auto max-w-7xl">
         <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-2xl">
-            <div className="mb-3 inline-flex items-center gap-2.5 font-display text-xs font-bold uppercase tracking-widest text-green">
+            <div className="mb-3 inline-flex items-center gap-2.5 font-display text-xs font-bold uppercase tracking-widest text-green-dark">
               <span className="block h-0.5 w-6 bg-green" /> Who We Serve
             </div>
             <h2 className="font-display text-4xl font-black uppercase leading-[0.95] text-navy md:text-5xl text-balance">
