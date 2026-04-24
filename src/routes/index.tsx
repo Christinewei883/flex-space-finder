@@ -327,11 +327,11 @@ function HomePage() {
       </section>
 
       {/* TRUST BAR */}
-      <section className="border-y border-white/10 bg-navy py-5">
+      <section className="border-y border-border bg-secondary py-5">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-8 gap-y-3 px-6 lg:px-12">
           {TRUST.map(({ icon: Icon, text }) => (
-            <div key={text} className="flex items-center gap-2.5 text-sm font-medium text-white/65">
-              <Icon className="h-4 w-4 flex-shrink-0 text-green" />
+            <div key={text} className="flex items-center gap-2.5 text-sm font-medium text-navy/75">
+              <Icon className="h-4 w-4 flex-shrink-0 text-green-dark" />
               {text}
             </div>
           ))}
