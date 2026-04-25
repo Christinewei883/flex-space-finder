@@ -109,7 +109,7 @@ export function IndustriesSlider() {
   const go = (i: number) => setIndex(Math.max(0, Math.min(totalPages - 1, i)));
 
   return (
-    <section className="bg-white px-6 py-24 lg:px-12">
+    <section id="industries" className="bg-white px-6 py-24 lg:px-12">
       <div className="mx-auto max-w-7xl">
         <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-2xl">
@@ -125,10 +125,11 @@ export function IndustriesSlider() {
             </p>
           </div>
           <a
-            href="#"
-            className="border-b-2 border-green pb-1 font-display text-xs font-bold uppercase tracking-widest text-navy hover:text-green"
+            href="#search"
+            className="inline-flex items-center gap-1.5 border-b-2 border-green pb-1 font-display text-xs font-bold uppercase tracking-widest text-navy transition-colors hover:text-green"
           >
-            View All Industries →
+            Match my industry
+            <ArrowRight className="h-3.5 w-3.5" />
           </a>
         </div>
 
