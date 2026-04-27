@@ -49,7 +49,7 @@ export const SPACES: Space[] = [
   },
   {
     img: spaceStudio,
-    title: "Office & Coworking",
+    title: "Event Space",
     range: "By the day or month",
     category: "Content / Events / Productions",
     price: "$250",
