@@ -1,13 +1,7 @@
-import { ArrowRight, Phone, Clock, Tag, FileCheck } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import { LeadForm } from "@/components/LeadForm";
 import { STATS } from "@/data/site";
 import heroWarehouse from "@/assets/space-warehouse-1.webp";
-
-const HERO_BULLETS = [
-  { icon: Clock, title: "Move in within", line: "48 hours" },
-  { icon: Tag, title: "All-in pricing,", line: "no surprises" },
-  { icon: FileCheck, title: "No lease.", line: "Total flexibility." },
-] as const;
 
 export function Hero() {
   return (
@@ -51,22 +45,6 @@ export function Hero() {
           <p className="animate-fade-up mt-6 max-w-xl text-lg leading-relaxed text-white/75 sm:text-xl">
             No long-term lease. Expand or downsize anytime.
           </p>
-
-          {/* Feature bullets */}
-          <ul className="animate-fade-up mt-9 grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-5">
-            {HERO_BULLETS.map(({ icon: Icon, title, line }) => (
-              <li key={title} className="flex items-center gap-3">
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-green/40 bg-green/10 text-green-light">
-                  <Icon className="h-5 w-5" strokeWidth={2} />
-                </span>
-                <span className="text-sm leading-snug text-white/85">
-                  {title}
-                  <br />
-                  <span className="font-semibold text-white">{line}</span>
-                </span>
-              </li>
-            ))}
-          </ul>
 
           <div className="animate-fade-up mt-9 flex flex-wrap items-center gap-x-6 gap-y-4">
             <a
