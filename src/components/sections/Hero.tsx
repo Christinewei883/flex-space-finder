@@ -50,10 +50,6 @@ export function Hero() {
 
           <p className="animate-fade-up mt-6 max-w-xl text-lg leading-relaxed text-white/75 sm:text-xl">
             No long-term lease. Expand or downsize anytime.
-            <br />
-            All-in pricing across{" "}
-            <span className="font-semibold text-green-light">50+</span> locations in{" "}
-            <span className="font-semibold text-green-light">22 states</span>.
           </p>
 
           {/* Feature bullets */}
