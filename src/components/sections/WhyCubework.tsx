@@ -1,14 +1,6 @@
-import { ArrowRight, Check, X, Clock, Calendar, Wrench, DollarSign, BarChart3, Shield, Star, PiggyBank, Tag, FileCheck } from "lucide-react";
+import { ArrowRight, Clock, Shield, Star, Tag, FileCheck } from "lucide-react";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { WHY } from "@/data/site";
-
-const COMPARE = [
-  { icon: Clock, label: "Move-In Time", cube: "48 hours", trad: "3–6 months" },
-  { icon: Calendar, label: "Lease Terms", cube: "Month-to-month", trad: "3–10 years" },
-  { icon: Wrench, label: "Build-Out", cube: "None", trad: "Expensive & time-consuming" },
-  { icon: DollarSign, label: "Pricing", cube: "All-in pricing", trad: "Hidden fees & NNN costs" },
-  { icon: BarChart3, label: "Scalability", cube: "Instant", trad: "Difficult & slow" },
-];
 
 const TRUST_BULLETS = [
   { icon: Clock, lines: ["Move in within", "48 hours"] },
