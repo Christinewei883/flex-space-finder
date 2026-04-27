@@ -137,6 +137,9 @@ export function IndustriesSlider() {
                     loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
+                  <span className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1 font-display text-[10px] font-bold uppercase tracking-[0.16em] text-green-dark shadow-sm backdrop-blur">
+                    Industry
+                  </span>
                 </div>
 
                 <div className="flex flex-1 flex-col bg-white p-7">
@@ -164,12 +167,23 @@ export function IndustriesSlider() {
                     </div>
                   </div>
 
-                  <button className="mt-6 inline-flex items-center gap-2.5 self-start font-display text-sm font-bold uppercase tracking-wider text-navy transition-all hover:gap-4 hover:text-green-dark">
-                    Learn More
-                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-green transition-transform hover:scale-110">
-                      <ArrowRight className="h-3.5 w-3.5 text-white" strokeWidth={2.5} />
-                    </span>
-                  </button>
+                  <div className="mt-6 flex items-end justify-between border-t border-navy/10 pt-5">
+                    <div>
+                      <div className="text-[10px] font-semibold uppercase tracking-widest text-navy/45">
+                        Spaces from
+                      </div>
+                      <div className="mt-1 font-display text-3xl font-black leading-none text-green-dark">
+                        {ind.price}
+                        <span className="ml-1 text-base font-bold text-navy/50">{ind.unit}</span>
+                      </div>
+                    </div>
+                    <button className="inline-flex items-center gap-2.5 font-display text-xs font-bold uppercase tracking-wider text-navy transition-all hover:gap-4 hover:text-green-dark">
+                      Learn More
+                      <span className="flex h-8 w-8 items-center justify-center rounded-full bg-green transition-transform hover:scale-110">
+                        <ArrowRight className="h-3.5 w-3.5 text-white" strokeWidth={2.5} />
+                      </span>
+                    </button>
+                  </div>
                 </div>
               </article>
             ))}
