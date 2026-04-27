@@ -68,24 +68,45 @@ export const WHY: WhyCard[] = [
 
 export const TESTIMONIALS: Testimonial[] = [
   {
-    initials: "MK",
+    initials: "EY",
     quote:
-      "We went from signed agreement to receiving freight in 36 hours. Our Amazon FBA prep operation was up before our competitors got a call back from their broker.",
-    name: "M. Kim",
-    role: "E-Commerce Operator · City of Industry, CA",
+      "I've been operating my business out of this location for close to 3 years and highly recommend it. The staff keeps the property clean, the loading docks are convenient, and there's a post office nearby for daily pickups. Many different size units and easy to upgrade — spaces fill up fast.",
+    name: "Elan Yadan",
+    role: "Tenant · 3 years",
   },
   {
-    initials: "DL",
+    initials: "JC",
     quote:
-      "We needed surge capacity for peak season without locking into a 3-year lease. Cubework gave us 15,000 SF for Q4, we scaled back in January. No penalties, no drama.",
-    name: "D. Leung",
-    role: "3PL Operations Director · Houston, TX",
+      "Safe and convenient warehouse. 24-hour security gate personnel, very friendly and helpful. The on-site manager is great with prompt attention to concerns. Kitchen, bathroom, and meeting room provided. Highly recommend for receiving and shipping.",
+    name: "Johnny Choi",
+    role: "Tenant · 2 years",
   },
   {
-    initials: "RP",
+    initials: "GS",
     quote:
-      "Tried to negotiate a traditional industrial lease for nine months. Signed with Cubework in three days. The all-in number is the actual number — no NNN surprises.",
-    name: "R. Patel",
-    role: "Founder · Apparel Brand · Atlanta, GA",
+      "Cubework is a great solution to our warehousing needs — this is our second time using their facility in six years. Whenever we need warehouse storage, Cubework is always on top of our list. With multiple locations across SoCal, you'll always find one in your area. Great service and flexible to our needs.",
+    name: "Gerard Sanico",
+    role: "Repeat Tenant · SoCal",
+  },
+  {
+    initials: "WW",
+    quote:
+      "Well-managed warehouse, easy parking, and very clean. There's a guard looking after the whole warehouse, so very safe. Very convenient for truck shipping with a dock and located well for UPS/FedEx pickup. I highly recommend it!",
+    name: "William Wei",
+    role: "Tenant",
+  },
+  {
+    initials: "DW",
+    quote:
+      "We leased a warehouse here for a couple of years — the facility is always clean, docks and equipment are plentiful, other tenants are nice, and the manager Alen was super helpful with onboarding, support, and termination. Cubework is a great and price-effective solution if you need temporary or long-term space without a huge commitment. 10/10.",
+    name: "Doug Welch",
+    role: "Local Guide · Former Tenant",
+  },
+  {
+    initials: "SJ",
+    quote:
+      "I've had my company headquarters at Cubework Lincolnwood for several years now and they've been fantastic the entire time. The Facilities Manager, Alen Besic, has always gone above and beyond. Highly recommend Cubework Lincolnwood for any business and warehousing needs.",
+    name: "Scott Judy",
+    role: "HQ Tenant · Lincolnwood, IL",
   },
 ];
