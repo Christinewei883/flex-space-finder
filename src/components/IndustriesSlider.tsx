@@ -2,14 +2,9 @@ import { useState, useRef, useEffect } from "react";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import indEcom from "@/assets/industry-ecom.jpg";
 import indFba from "@/assets/industry-fba.jpg";
-import indImport from "@/assets/industry-import.jpg";
-import ind3pl from "@/assets/industry-3pl.jpg";
 import indTruck from "@/assets/industry-truck.jpg";
 import indMfg from "@/assets/industry-mfg.jpg";
-import indFood from "@/assets/industry-food.jpg";
 import indPopup from "@/assets/industry-popup.jpg";
-import indContent from "@/assets/industry-content.jpg";
-import indGovt from "@/assets/industry-govt.jpg";
 import indParcel from "@/assets/industry-parcel.jpg";
 
 type Industry = {
