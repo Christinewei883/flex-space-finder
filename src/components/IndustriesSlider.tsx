@@ -17,74 +17,58 @@ type Industry = {
   title: string;
   desc: string;
   uses: string[];
+  price: string;
+  unit: string;
 };
 
 const INDUSTRIES: Industry[] = [
   {
     img: indEcom,
     title: "E-Commerce & Fast Fashion",
-    desc: "Global brands like SHEIN, Temu, and emerging DTC labels use Cubework for U.S. pop-up event staging, returns processing, overflow inventory, and last-mile distribution — without signing a multi-year lease.",
+    desc: "Perfect for pop-up events, returns processing, overflow inventory, and last-mile distribution.",
     uses: ["Pop-up event staging", "Returns processing", "Overflow inventory", "Flash sale fulfillment"],
+    price: "$300",
+    unit: "/mo",
   },
   {
     img: indFba,
     title: "Amazon FBA & D2C",
-    desc: "Amazon sellers and D2C brands use Cubework as prep, kitting, and buffer stock space — scaling up for Q4 peak season and pulling back in Q1 without penalties or renegotiation.",
+    desc: "Scale for peak season and beyond with prep, kitting, and buffer stock space — no penalties or long-term lease.",
     uses: ["FBA prep & labeling", "Q4 surge capacity", "Kitting & bundling", "Multi-location fulfillment"],
-  },
-  {
-    img: indImport,
-    title: "Import / Export",
-    desc: "Importers and exporters near LA, Houston, and Savannah use Cubework for cross-docking, container unloading, and goods staging before domestic distribution — no warehouse lease required.",
-    uses: ["Cross-docking", "Container unloading", "Port-adjacent staging", "Customs buffer stock"],
-  },
-  {
-    img: ind3pl,
-    title: "3PL Providers",
-    desc: "Third-party logistics companies use Cubework to win new client contracts without long-term real estate risk. Flex capacity that matches your sales pipeline — not your lease expiration.",
-    uses: ["Client overflow capacity", "Multi-market expansion", "Short-term contract wins", "Seasonal surge handling"],
+    price: "$300",
+    unit: "/mo",
   },
   {
     img: indTruck,
     title: "Transportation & Drayage",
-    desc: "Trucking, drayage, and last-mile operators use Cubework for secure truck and trailer parking, overnight driver amenities, and yard operations — near major ports and interstates across 22 states.",
+    desc: "Secure truck and trailer parking, overnight driver amenities, and yard operations across 22 states.",
     uses: ["Truck & trailer parking", "Container storage", "Driver amenities", "Last-mile staging"],
+    price: "$500",
+    unit: "/mo",
   },
   {
     img: indMfg,
     title: "Light Manufacturing",
-    desc: "Assembly, kitting, and light production operations use Cubework to launch without massive upfront capital. Heavy-duty power, dock-high loading, and forklift-ready bays from day one.",
+    desc: "Assembly, kitting, and light production operations with heavy power, dock-high loading, and forklift-ready bays.",
     uses: ["Assembly & kitting", "Product finishing", "Heavy power bays", "Dock-high operations"],
-  },
-  {
-    img: indFood,
-    title: "Food & Beverage",
-    desc: "Food distributors, ghost kitchen operators, and specialty food brands use Cubework for ambient distribution staging, production space, and regional fulfillment — compliant and move-in ready.",
-    uses: ["Ghost kitchen staging", "Ambient distribution", "Regional food hub", "Specialty production"],
+    price: "$350",
+    unit: "/mo",
   },
   {
     img: indPopup,
     title: "Pop-Up Retail & Events",
-    desc: "Brands launching U.S. pop-up retail activations use Cubework to stage merchandise, store fixtures, and event materials close to the venue — with same-week availability and no long-term commitment.",
+    desc: "Stage merchandise, store fixtures, and event materials close to the venue — with same-week availability.",
     uses: ["Merchandise staging", "Fixture & prop storage", "Event logistics hub", "Same-week availability"],
-  },
-  {
-    img: indContent,
-    title: "Content & Media Production",
-    desc: "Creators, studios, and production companies use Cubework for podcasting, video shoots, product photography, and live streaming — professional power hookups, on-demand booking, no long lease.",
-    uses: ["Podcast studios", "Video production", "Product photography", "Live streaming"],
-  },
-  {
-    img: indGovt,
-    title: "Government & Public Sector",
-    desc: "Federal agencies, emergency management teams, and public sector contractors use Cubework for secure equipment storage, rapid deployment staging, and regional distribution across our nationwide network.",
-    uses: ["Emergency staging", "Equipment storage", "Rapid deployment", "Secure access facilities"],
+    price: "$250",
+    unit: "/day",
   },
   {
     img: indParcel,
     title: "Last Mile & Parcel Carriers",
-    desc: "Delivery networks, regional parcel carriers, and last-mile operators use Cubework as sortation hubs, package staging facilities, and driver dispatch points — strategically located near dense residential corridors across 22 states.",
+    desc: "Sortation hubs, package staging, and driver dispatch points — strategically located near dense corridors.",
     uses: ["Sortation & staging", "Driver dispatch hubs", "Package overflow", "Returns consolidation"],
+    price: "$400",
+    unit: "/mo",
   },
 ];
 
