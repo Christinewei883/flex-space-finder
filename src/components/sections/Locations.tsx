@@ -111,19 +111,21 @@ export function Locations() {
                   loading="lazy"
                   className="h-full w-full object-cover"
                 />
-                <span className="absolute left-3 top-3 rounded-full bg-white/95 px-3 py-1 font-display text-[10px] font-bold uppercase tracking-[0.16em] text-navy shadow-sm">
-                  {l.state}
-                </span>
-                {l.status && (
-                  <span
-                    className={cn(
-                      "absolute right-3 top-3 rounded-full px-3 py-1 font-display text-[10px] font-bold uppercase tracking-[0.16em] shadow-sm whitespace-nowrap",
-                      STATUS_STYLES[l.status],
-                    )}
-                  >
-                    {l.status}
+                <div className="absolute inset-x-3 top-3 flex items-start justify-between gap-2">
+                  <span className="max-w-[55%] truncate rounded-full bg-white/95 px-3 py-1 font-display text-[10px] font-bold uppercase tracking-[0.16em] text-navy shadow-sm">
+                    {l.state}
                   </span>
-                )}
+                  {l.status && (
+                    <span
+                      className={cn(
+                        "rounded-full px-3 py-1 font-display text-[10px] font-bold uppercase tracking-[0.16em] shadow-sm whitespace-nowrap",
+                        STATUS_STYLES[l.status],
+                      )}
+                    >
+                      {l.status}
+                    </span>
+                  )}
+                </div>
               </div>
               <div className="flex flex-1 flex-col p-4">
                 <div className="font-display text-base font-extrabold uppercase tracking-wide text-navy">
