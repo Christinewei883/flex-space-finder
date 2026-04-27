@@ -121,19 +121,19 @@ export function WhyCubework() {
         </div>
 
         {/* Savings card */}
-        <div className="overflow-hidden rounded-2xl bg-gradient-to-br from-navy via-navy to-navy-dark text-white">
-          <div className="grid grid-cols-1 gap-6 p-8 lg:grid-cols-[1fr_1fr] lg:gap-10 lg:p-10">
-            <div>
-              <div className="font-display text-[11px] font-bold uppercase tracking-[0.24em] text-green-light">
+        <div className="overflow-hidden rounded-[20px] bg-navy-dark text-primary-foreground">
+          <div className="grid min-h-[486px] grid-cols-1 items-center gap-12 px-8 py-12 md:px-14 lg:grid-cols-[1.02fr_1.1fr_0.72fr] lg:gap-10 lg:px-14 xl:px-16">
+            <div className="lg:self-start lg:pt-1">
+              <div className="font-display text-[16px] font-bold uppercase tracking-[0.24em] text-green-light">
                 Average Savings
               </div>
-              <div className="mt-2 font-display text-6xl font-black leading-none text-white md:text-7xl">
+              <div className="mt-5 font-display text-7xl font-black leading-none text-primary-foreground md:text-8xl lg:text-[6.5rem]">
                 $300K+
               </div>
-              <div className="mt-3 font-display text-[12px] font-bold uppercase tracking-[0.22em] text-green-light">
+              <div className="mt-7 font-display text-[16px] font-bold uppercase tracking-[0.24em] text-green-light">
                 vs Traditional Leasing
               </div>
-              <p className="mt-5 max-w-sm text-[14px] leading-relaxed text-white/75">
+              <p className="mt-8 max-w-[520px] text-[20px] leading-[1.6] text-primary-foreground/75">
                 No build-out. No deposit. No NNN.
                 <br />
                 More savings. More flexibility. More cash for growth.
@@ -141,29 +141,30 @@ export function WhyCubework() {
             </div>
 
             {/* Bar chart */}
-            <div className="flex items-end justify-center gap-8 lg:gap-12">
+            <div className="flex min-h-[350px] items-end justify-center gap-16 lg:gap-[68px]">
               <div className="flex flex-col items-center">
-                <div className="font-display text-sm font-bold text-white/80">$300K+</div>
-                <div className="mt-2 h-40 w-20 rounded-t-md bg-white/30 md:h-48 md:w-24" />
-                <div className="mt-3 text-center text-[11px] font-bold uppercase tracking-[0.14em] text-white/70">
+                <div className="font-display text-[20px] font-bold leading-none text-primary-foreground/80">$300K+</div>
+                <div className="mt-4 h-[270px] w-[136px] rounded-t-[4px] bg-steel/70" />
+                <div className="mt-5 text-center font-display text-[16px] font-bold uppercase leading-[1.45] tracking-[0.18em] text-primary-foreground/65">
                   Traditional<br />Leasing
                 </div>
               </div>
               <div className="flex flex-col items-center">
-                <div className="font-display text-sm font-bold text-green-light">$0</div>
-                <div className="mt-2 h-12 w-20 rounded-t-md bg-green md:w-24" />
-                <div className="mt-3 text-center text-[11px] font-bold uppercase tracking-[0.14em] text-green-light">
+                <div className="font-display text-[20px] font-bold leading-none text-green-light">$0</div>
+                <div className="mt-4 h-[68px] w-[136px] rounded-t-[4px] bg-green" />
+                <div className="mt-5 text-center font-display text-[16px] font-bold uppercase leading-[1.45] tracking-[0.18em] text-green-light">
                   Cubework
                 </div>
               </div>
-              <div className="hidden flex-col items-center self-center md:flex">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-green/15 text-green-light">
-                  <PiggyBank className="h-8 w-8" />
-                </div>
-                <div className="mt-3 max-w-[140px] text-center text-[12px] leading-tight text-white">
-                  <span className="font-display font-bold">Save $300K+</span>
-                  <div className="text-white/70">in upfront and ongoing costs.</div>
-                </div>
+            </div>
+
+            <div className="flex flex-col items-center justify-center text-center lg:pt-6">
+              <div className="flex h-[90px] w-[90px] items-center justify-center rounded-full bg-green-dark/45 text-green-light">
+                <PiggyBank className="h-10 w-10" strokeWidth={2.8} />
+              </div>
+              <div className="mt-5 max-w-[180px] text-[17px] leading-[1.25] text-primary-foreground">
+                <span className="font-display font-bold">Save $300K+</span>
+                <div className="text-primary-foreground/70">in upfront and ongoing costs.</div>
               </div>
             </div>
           </div>
