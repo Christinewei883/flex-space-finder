@@ -46,6 +46,7 @@ function HomePage() {
         <IndustriesSlider />
         <Testimonials />
         <Tour />
+        <Blogs />
         <FinalCTA />
       </main>
       <SiteFooter />
