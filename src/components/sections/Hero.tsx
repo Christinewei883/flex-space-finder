@@ -83,26 +83,6 @@ export function Hero() {
             </a>
           </div>
 
-          <div className="animate-fade-up mt-12 hidden flex-wrap items-center gap-6 lg:flex">
-            <div className="flex items-center -space-x-2">
-              {["MK", "DL", "RP", "JS"].map((init) => (
-                <div
-                  key={init}
-                  className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-navy-dark bg-gradient-to-br from-white/15 to-white/5 font-display text-[10px] font-bold tracking-widest text-white/85 backdrop-blur"
-                >
-                  {init}
-                </div>
-              ))}
-            </div>
-            <div>
-              <div className="font-display text-sm font-bold uppercase tracking-[0.18em] text-white">
-                2,000+ operators
-              </div>
-              <div className="mt-0.5 text-xs text-white/55">
-                Move in within 48 hours of signing
-              </div>
-            </div>
-          </div>
         </div>
 
         <div id="search" className="animate-fade-up lg:pl-4">
