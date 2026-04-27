@@ -1,10 +1,19 @@
+import sheinLogo from "@/assets/logos/shein.png";
+import walmartLogo from "@/assets/logos/walmart.png";
+import fedexLogo from "@/assets/logos/fedex.png";
+import uniuniLogo from "@/assets/logos/uniuni.png";
+import gofoLogo from "@/assets/logos/gofo.png";
+import itemLogo from "@/assets/logos/item.png";
+import uniscoLogo from "@/assets/logos/unisco.png";
+
 const LOGOS = [
-  "SHEIN",
-  "Temu",
-  "Amazon Sellers",
-  "FBA Network",
-  "DTC Brands",
-  "Fortune 500",
+  { name: "SHEIN", src: sheinLogo },
+  { name: "Walmart", src: walmartLogo },
+  { name: "FedEx", src: fedexLogo },
+  { name: "UniUni", src: uniuniLogo },
+  { name: "GOFO", src: gofoLogo },
+  { name: "ITEM.com", src: itemLogo },
+  { name: "UNISCO.com", src: uniscoLogo },
 ] as const;
 
 export function TrustBar() {
@@ -21,15 +30,19 @@ export function TrustBar() {
           </div>
 
           <ul
-            className="flex flex-wrap items-center gap-x-8 gap-y-4 sm:gap-x-12 lg:justify-between"
+            className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 sm:gap-x-14 lg:justify-between"
             role="list"
           >
-            {LOGOS.map((name) => (
-              <li
-                key={name}
-                className="font-display text-base font-extrabold uppercase tracking-[0.2em] text-navy/35 transition-colors hover:text-navy/70 sm:text-lg"
-              >
-                {name}
+            {LOGOS.map((logo) => (
+              <li key={logo.name} className="flex items-center">
+                <img
+                  src={logo.src}
+                  alt={`${logo.name} logo`}
+                  width={512}
+                  height={512}
+                  loading="lazy"
+                  className="h-8 w-auto max-w-[120px] object-contain opacity-60 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 sm:h-10"
+                />
               </li>
             ))}
           </ul>
