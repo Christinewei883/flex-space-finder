@@ -43,9 +43,9 @@ export function Hero() {
           </div>
 
           <h1 className="animate-fade-up mt-6 font-display text-4xl font-black uppercase leading-[1.02] tracking-tight text-white text-balance sm:text-5xl lg:text-6xl xl:text-[4.25rem]">
-            On-Demand Warehouse Space
+            On-Demand Warehouse Space.
             <br />
-            <span className="text-green-light">At Your Speed</span>
+            <span className="text-green-light">On Your Terms.</span>
           </h1>
 
           <p className="animate-fade-up mt-6 max-w-xl text-lg leading-relaxed text-white/75 sm:text-xl">
