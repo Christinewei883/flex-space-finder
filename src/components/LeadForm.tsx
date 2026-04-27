@@ -301,7 +301,7 @@ export function LeadForm({ variant = "card", className }: Props) {
         <Row icon={Calendar}>
           <fieldset>
             <legend className="mb-2 block text-[11px] font-bold uppercase tracking-widest text-navy">
-              When do you need to move in?
+              When do you need it?
             </legend>
             <div className="grid grid-cols-3 gap-2" role="radiogroup">
               {MOVE_WINDOWS.map((opt) => {
@@ -336,50 +336,6 @@ export function LeadForm({ variant = "card", className }: Props) {
 
         <div className="border-t border-border" />
 
-        {/* SIZE */}
-        <Row icon={Maximize2}>
-          <label
-            htmlFor={`${formId}-size`}
-            className="mb-1.5 block text-[11px] font-bold uppercase tracking-widest text-navy"
-          >
-            Approximate size <span className="text-navy/40">(optional)</span>
-          </label>
-          <select
-            id={`${formId}-size`}
-            {...register("size")}
-            className="w-full rounded-md border border-border bg-white px-3.5 py-2.5 text-sm text-navy outline-none transition-colors focus-visible:border-green focus-visible:ring-2 focus-visible:ring-green/30"
-          >
-            <option value="">Select size range</option>
-            {SIZE_RANGES.map((s) => (
-              <option key={s} value={s}>
-                {s}
-              </option>
-            ))}
-          </select>
-        </Row>
-
-        {/* BUDGET */}
-        <Row icon={DollarSign}>
-          <label
-            htmlFor={`${formId}-budget`}
-            className="mb-1.5 block text-[11px] font-bold uppercase tracking-widest text-navy"
-          >
-            Monthly budget <span className="text-navy/40">(optional)</span>
-          </label>
-          <select
-            id={`${formId}-budget`}
-            {...register("budget")}
-            className="w-full rounded-md border border-border bg-white px-3.5 py-2.5 text-sm text-navy outline-none transition-colors focus-visible:border-green focus-visible:ring-2 focus-visible:ring-green/30"
-          >
-            <option value="">Select budget range</option>
-            {BUDGET_RANGES.map((b) => (
-              <option key={b} value={b}>
-                {b}
-              </option>
-            ))}
-          </select>
-        </Row>
-
         {/* PHONE */}
         <Row icon={Phone}>
           <label
@@ -405,9 +361,6 @@ export function LeadForm({ variant = "card", className }: Props) {
           {errors.phone && (
             <p className="mt-1 text-xs text-destructive">{errors.phone.message}</p>
           )}
-          <p className="mt-2 inline-flex items-center gap-1.5 text-[11px] text-navy/50">
-            <Lock className="h-3 w-3" /> Your information is secure and never shared.
-          </p>
         </Row>
 
         <button
@@ -427,11 +380,18 @@ export function LeadForm({ variant = "card", className }: Props) {
             </>
           ) : (
             <>
-              See Matching Spaces <ArrowRight className="h-4 w-4" />
+              Show Me Matches <ArrowRight className="h-4 w-4" />
             </>
           )}
         </button>
+
+        <p className="flex items-center justify-center gap-1.5 text-center text-[12px] text-navy/55">
+          <Lock className="h-3 w-3" /> Your information is secure and never shared.
+        </p>
       </div>
+    </form>
+  );
+}
     </form>
   );
 }
