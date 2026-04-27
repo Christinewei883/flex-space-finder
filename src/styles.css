@@ -66,6 +66,13 @@
   --color-green: var(--green);
   --color-green-dark: var(--green-dark);
   --color-green-light: var(--green-light);
+  --color-wolf-grey: var(--wolf-grey);
+  --color-canary: var(--canary);
+  --color-geko: var(--geko);
+  --color-aqua: var(--aqua);
+  --color-teal: var(--teal);
+  --color-steel: var(--steel);
+  --color-sapphire: var(--sapphire);
 
   --font-display: "Helvetica Neue", "Helvetica", "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Helvetica Neue", "Helvetica", "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
