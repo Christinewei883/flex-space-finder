@@ -67,20 +67,38 @@
   --color-green-dark: var(--green-dark);
   --color-green-light: var(--green-light);
 
-  --font-display: "Montserrat", ui-sans-serif, system-ui, sans-serif;
-  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Helvetica Neue", "Helvetica", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Helvetica Neue", "Helvetica", "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 :root {
   --radius: 0.375rem;
 
-  /* Brand: Cubework navy + green */
-  --navy: oklch(0.25 0.06 255);
-  --navy-dark: oklch(0.18 0.05 255);
-  --navy-mid: oklch(0.30 0.07 255);
-  --green: oklch(0.72 0.18 140);
-  --green-dark: oklch(0.62 0.18 140);
-  --green-light: oklch(0.78 0.18 140);
+  /* ============================================================
+   * Cubework Official Brand Colors
+   * Source: https://design.cubework.com/guidelines/colors
+   * ============================================================ */
+
+  /* Primary — Green #38D430 */
+  --green: oklch(0.78 0.24 142);
+  --green-dark: oklch(0.66 0.22 142);
+  --green-light: oklch(0.86 0.19 142);
+
+  /* Neutral — Navy Blue #002B49 */
+  --navy: oklch(0.27 0.07 244);
+  --navy-dark: oklch(0.18 0.06 244);
+  --navy-mid: oklch(0.35 0.07 244);
+
+  /* Neutral — Wolf Grey #8C8C8C */
+  --wolf-grey: oklch(0.62 0 0);
+
+  /* Secondary accents (for charts/badges if needed) */
+  --canary: oklch(0.92 0.18 100);   /* #F3E85C */
+  --geko:   oklch(0.89 0.18 125);   /* #C2E76B */
+  --aqua:   oklch(0.78 0.10 200);   /* #54CBCF */
+  --teal:   oklch(0.56 0.10 200);   /* #008C95 */
+  --steel:  oklch(0.50 0.11 230);   /* #046E95 */
+  --sapphire: oklch(0.40 0.13 255); /* #194F90 */
 
   --background: oklch(1 0 0);
   --foreground: var(--navy);
@@ -93,27 +111,27 @@
   --secondary: oklch(0.97 0.005 250);
   --secondary-foreground: var(--navy);
   --muted: oklch(0.97 0.005 250);
-  --muted-foreground: oklch(0.50 0.02 255);
-  --accent: oklch(0.95 0.02 140);
+  --muted-foreground: var(--wolf-grey);
+  --accent: oklch(0.95 0.05 142);
   --accent-foreground: var(--navy);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.92 0.01 255);
-  --input: oklch(0.92 0.01 255);
+  --border: oklch(0.92 0.005 250);
+  --input: oklch(0.92 0.005 250);
   --ring: var(--green);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
+  --chart-1: var(--green);
+  --chart-2: var(--teal);
+  --chart-3: var(--sapphire);
+  --chart-4: var(--canary);
+  --chart-5: var(--aqua);
   --sidebar: oklch(0.984 0.003 247.858);
-  --sidebar-foreground: oklch(0.129 0.042 264.695);
-  --sidebar-primary: oklch(0.208 0.042 265.755);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-foreground: var(--navy);
+  --sidebar-primary: var(--navy);
+  --sidebar-primary-foreground: oklch(1 0 0);
   --sidebar-accent: oklch(0.968 0.007 247.896);
-  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
+  --sidebar-accent-foreground: var(--navy);
   --sidebar-border: oklch(0.929 0.013 255.508);
-  --sidebar-ring: oklch(0.704 0.04 256.788);
+  --sidebar-ring: var(--green);
 }
 
 .dark {
