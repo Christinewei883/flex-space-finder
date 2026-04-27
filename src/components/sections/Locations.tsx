@@ -112,8 +112,8 @@ export function Locations() {
                   className="h-full w-full object-cover"
                 />
                 <div className="absolute inset-x-3 top-3 flex items-start justify-between gap-2">
-                  <span className="max-w-[55%] truncate rounded-full bg-white/95 px-3 py-1 font-display text-[10px] font-bold uppercase tracking-[0.16em] text-navy shadow-sm">
-                    {l.state}
+                  <span className="rounded-full bg-white/95 px-3 py-1 font-display text-[10px] font-bold uppercase tracking-[0.16em] text-navy shadow-sm">
+                    {l.address.slice(-2)}
                   </span>
                   {l.status && (
                     <span
