@@ -9,6 +9,7 @@ import { WhyCubework } from "@/components/sections/WhyCubework";
 import { Spaces } from "@/components/sections/Spaces";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Tour } from "@/components/sections/Tour";
+import { Blogs } from "@/components/sections/Blogs";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { SiteFooter } from "@/components/sections/SiteFooter";
 
