@@ -36,9 +36,9 @@ export function Hero() {
             </span>
           </div>
 
-          <h1 className="animate-fade-up mt-6 font-display text-[2.75rem] font-black uppercase leading-[0.95] tracking-tight text-white text-balance sm:text-6xl lg:text-7xl xl:text-[5.25rem]">
-            Warehouse space that{" "}
-            <span className="relative whitespace-nowrap text-green-light">
+          <h1 className="animate-fade-up mt-6 font-display text-[2.25rem] font-black uppercase leading-[0.95] tracking-tight text-white text-balance sm:text-5xl lg:text-6xl xl:text-[4.25rem]">
+            On-Demand Warehouse Space that{" "}
+            <span className="relative inline text-green-light">
               moves at your speed
               <svg
                 aria-hidden
