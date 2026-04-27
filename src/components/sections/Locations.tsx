@@ -46,7 +46,7 @@ export function Locations() {
               Major U.S. logistics corridors — port-adjacent, near interstates, ready to operate.
             </p>
           </div>
-          <div className="flex items-center gap-3 pt-10">
+          <div className="flex items-center gap-4 pt-10">
             <a
               href="#search"
               className="inline-flex items-center gap-1.5 font-display text-xs font-bold uppercase tracking-[0.18em] text-navy transition-colors hover:text-green-dark"
@@ -54,6 +54,22 @@ export function Locations() {
               Find one near me
               <ArrowRight className="h-3.5 w-3.5" />
             </a>
+            <div className="hidden gap-2 lg:flex">
+              <button
+                type="button"
+                aria-label="Previous"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-navy/15 bg-white text-navy transition-all hover:border-navy hover:bg-navy hover:text-white"
+              >
+                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+              </button>
+              <button
+                type="button"
+                aria-label="Next"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-navy/15 bg-white text-navy transition-all hover:border-navy hover:bg-navy hover:text-white"
+              >
+                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -95,13 +111,13 @@ export function Locations() {
                   loading="lazy"
                   className="h-full w-full object-cover"
                 />
-                <span className="absolute left-3 top-3 rounded-md bg-white/95 px-2.5 py-1 font-display text-[10px] font-bold uppercase tracking-[0.18em] text-navy shadow-sm">
+                <span className="absolute left-3 top-3 rounded-full bg-white/95 px-3 py-1 font-display text-[10px] font-bold uppercase tracking-[0.16em] text-navy shadow-sm">
                   {l.state}
                 </span>
                 {l.status && (
                   <span
                     className={cn(
-                      "absolute right-3 top-3 rounded-md px-2.5 py-1 font-display text-[10px] font-bold uppercase tracking-[0.18em] shadow-sm",
+                      "absolute right-3 top-3 rounded-full px-3 py-1 font-display text-[10px] font-bold uppercase tracking-[0.16em] shadow-sm whitespace-nowrap",
                       STATUS_STYLES[l.status],
                     )}
                   >
@@ -109,38 +125,38 @@ export function Locations() {
                   </span>
                 )}
               </div>
-              <div className="flex flex-1 flex-col p-5">
-                <div className="font-display text-lg font-extrabold uppercase tracking-wide text-navy">
+              <div className="flex flex-1 flex-col p-4">
+                <div className="font-display text-base font-extrabold uppercase tracking-wide text-navy">
                   {l.name}
                 </div>
-                <div className="mt-1 text-[13px] text-navy/60">{l.address}</div>
-                <div className="mt-1 text-[12px] text-navy/45">{l.meta}</div>
+                <div className="mt-1 text-[12px] text-navy/60">{l.address}</div>
+                <div className="mt-0.5 text-[11px] text-navy/45">{l.meta}</div>
 
-                <div className="mt-4 grid grid-cols-2 gap-3 border-t border-border pt-4">
+                <div className="mt-3 grid grid-cols-2 gap-2 border-t border-border pt-3">
                   <div>
-                    <div className="font-display text-[10px] font-bold uppercase tracking-[0.16em] text-navy/50">
+                    <div className="font-display text-[9px] font-bold uppercase tracking-[0.14em] text-navy/50">
                       From
                     </div>
-                    <div className="mt-0.5 font-display text-xl font-black text-green-dark">
+                    <div className="mt-0.5 font-display text-lg font-black leading-none text-green-dark whitespace-nowrap">
                       ${l.priceFrom}
-                      <span className="text-sm font-bold text-green-dark/80">/mo</span>
+                      <span className="text-[11px] font-bold text-green-dark/80">/mo</span>
                     </div>
-                    <div className="text-[10px] text-navy/50">All-in pricing</div>
+                    <div className="mt-1 text-[10px] text-navy/50">All-in pricing</div>
                   </div>
                   <div>
-                    <div className="font-display text-[10px] font-bold uppercase tracking-[0.16em] text-navy/50">
+                    <div className="font-display text-[9px] font-bold uppercase tracking-[0.14em] text-navy/50">
                       Available
                     </div>
-                    <div className="mt-0.5 font-display text-xl font-black text-green-dark">
+                    <div className="mt-0.5 font-display text-lg font-black leading-none text-green-dark">
                       {l.available}
                     </div>
-                    <div className="text-[10px] text-navy/50">spaces</div>
+                    <div className="mt-1 text-[10px] text-navy/50">spaces</div>
                   </div>
                 </div>
 
                 <a
                   href="#search"
-                  className="mt-4 inline-flex items-center justify-center gap-2 rounded-lg bg-green px-4 py-3 font-display text-xs font-bold uppercase tracking-[0.16em] text-white transition-all hover:bg-green-dark"
+                  className="mt-3 inline-flex items-center justify-center gap-1.5 rounded-lg bg-green px-3 py-2.5 font-display text-[11px] font-bold uppercase tracking-[0.14em] text-white transition-all hover:bg-green-dark whitespace-nowrap"
                 >
                   See Availability
                   <ArrowRight className="h-3.5 w-3.5" />
