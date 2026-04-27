@@ -257,7 +257,7 @@ export function LeadForm({ variant = "card", className }: Props) {
         <Row icon={Package}>
           <fieldset>
             <legend className="mb-2 block text-[11px] font-bold uppercase tracking-widest text-navy">
-              What type of space?
+              What do you need?
             </legend>
             <div className="grid grid-cols-2 gap-2.5" role="radiogroup">
               {SPACE_TYPES.map((opt) => {
