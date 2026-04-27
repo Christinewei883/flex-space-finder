@@ -407,28 +407,6 @@ export function LeadForm({ variant = "card", className }: Props) {
           )}
         </button>
       </div>
-
-      {/* Credibility strip */}
-      <div className="mt-6 grid grid-cols-3 gap-2 border-t border-border pt-5 text-center">
-        <div className="flex flex-col items-center">
-          <div className="font-display text-base font-black leading-none text-navy">1 hr</div>
-          <div className="mt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-navy/50">
-            Response
-          </div>
-        </div>
-        <div className="flex flex-col items-center border-x border-border">
-          <div className="font-display text-base font-black leading-none text-navy">48 hr</div>
-          <div className="mt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-navy/50">
-            Move-in
-          </div>
-        </div>
-        <div className="flex flex-col items-center">
-          <div className="font-display text-base font-black leading-none text-navy">2,000+</div>
-          <div className="mt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-navy/50">
-            Tenants
-          </div>
-        </div>
-      </div>
     </form>
   );
 }
