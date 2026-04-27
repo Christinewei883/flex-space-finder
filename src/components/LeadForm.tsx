@@ -10,10 +10,8 @@ import {
   MapPin,
   Package,
   Calendar,
-  Maximize2,
-  DollarSign,
   Lock,
-  Zap,
+  Clock,
   Warehouse as WarehouseIcon,
   Truck,
   Briefcase,
@@ -167,23 +165,50 @@ export function LeadForm({ variant = "card", className }: Props) {
       aria-labelledby={`${formId}-title`}
     >
       <div className="flex items-center justify-between gap-3">
-        <div className="font-display text-[10px] font-bold uppercase tracking-[0.24em] text-green-dark">
+        <div className="font-display text-[11px] font-bold uppercase tracking-[0.24em] text-green-dark">
           Find Your Space
         </div>
-        <div className="inline-flex items-center gap-1.5 rounded-full bg-green/10 px-2.5 py-1 text-[11px] font-semibold text-green-dark">
-          <Zap className="h-3 w-3" fill="currentColor" />
+        <div className="inline-flex items-center gap-1.5 text-[12px] font-medium text-navy/60">
+          <Clock className="h-3.5 w-3.5" />
           Takes ~60 seconds
         </div>
       </div>
-      <h2
+
+      {/* Step indicator */}
+      <ol
+        className="mt-5 grid grid-cols-4 gap-2"
+        aria-label="Form progress"
         id={`${formId}-title`}
-        className="mt-3 font-display text-[2rem] font-black leading-[1.05] tracking-tight text-navy sm:text-[2.25rem]"
       >
-        Let's find your <span className="text-green-dark">perfect space.</span>
-      </h2>
-      <p className="mt-2 text-[14px] leading-relaxed text-navy/60">
-        Answer a few quick questions and we'll show you the best matches — fast.
-      </p>
+        {[
+          { n: 1, label: "Location" },
+          { n: 2, label: "Space Type" },
+          { n: 3, label: "Move-In" },
+          { n: 4, label: "Details" },
+        ].map((step, i, arr) => (
+          <li key={step.n} className="relative flex flex-col items-center">
+            {i < arr.length - 1 && (
+              <span
+                aria-hidden
+                className="absolute left-[calc(50%+18px)] right-[calc(-50%+18px)] top-[14px] border-t border-dashed border-navy/20"
+              />
+            )}
+            <span
+              className={cn(
+                "relative z-10 flex h-7 w-7 items-center justify-center rounded-full font-display text-xs font-bold",
+                step.n === 1
+                  ? "bg-green text-white"
+                  : "bg-navy/10 text-navy/50",
+              )}
+            >
+              {step.n}
+            </span>
+            <span className="mt-1.5 text-[10px] font-semibold uppercase tracking-wider text-navy/60">
+              {step.label}
+            </span>
+          </li>
+        ))}
+      </ol>
 
       {/* Honeypot */}
       <div aria-hidden className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
@@ -232,7 +257,7 @@ export function LeadForm({ variant = "card", className }: Props) {
         <Row icon={Package}>
           <fieldset>
             <legend className="mb-2 block text-[11px] font-bold uppercase tracking-widest text-navy">
-              What type of space?
+              What do you need?
             </legend>
             <div className="grid grid-cols-2 gap-2.5" role="radiogroup">
               {SPACE_TYPES.map((opt) => {
@@ -276,7 +301,7 @@ export function LeadForm({ variant = "card", className }: Props) {
         <Row icon={Calendar}>
           <fieldset>
             <legend className="mb-2 block text-[11px] font-bold uppercase tracking-widest text-navy">
-              When do you need to move in?
+              When do you need it?
             </legend>
             <div className="grid grid-cols-3 gap-2" role="radiogroup">
               {MOVE_WINDOWS.map((opt) => {
@@ -311,50 +336,6 @@ export function LeadForm({ variant = "card", className }: Props) {
 
         <div className="border-t border-border" />
 
-        {/* SIZE */}
-        <Row icon={Maximize2}>
-          <label
-            htmlFor={`${formId}-size`}
-            className="mb-1.5 block text-[11px] font-bold uppercase tracking-widest text-navy"
-          >
-            Approximate size <span className="text-navy/40">(optional)</span>
-          </label>
-          <select
-            id={`${formId}-size`}
-            {...register("size")}
-            className="w-full rounded-md border border-border bg-white px-3.5 py-2.5 text-sm text-navy outline-none transition-colors focus-visible:border-green focus-visible:ring-2 focus-visible:ring-green/30"
-          >
-            <option value="">Select size range</option>
-            {SIZE_RANGES.map((s) => (
-              <option key={s} value={s}>
-                {s}
-              </option>
-            ))}
-          </select>
-        </Row>
-
-        {/* BUDGET */}
-        <Row icon={DollarSign}>
-          <label
-            htmlFor={`${formId}-budget`}
-            className="mb-1.5 block text-[11px] font-bold uppercase tracking-widest text-navy"
-          >
-            Monthly budget <span className="text-navy/40">(optional)</span>
-          </label>
-          <select
-            id={`${formId}-budget`}
-            {...register("budget")}
-            className="w-full rounded-md border border-border bg-white px-3.5 py-2.5 text-sm text-navy outline-none transition-colors focus-visible:border-green focus-visible:ring-2 focus-visible:ring-green/30"
-          >
-            <option value="">Select budget range</option>
-            {BUDGET_RANGES.map((b) => (
-              <option key={b} value={b}>
-                {b}
-              </option>
-            ))}
-          </select>
-        </Row>
-
         {/* PHONE */}
         <Row icon={Phone}>
           <label
@@ -380,9 +361,6 @@ export function LeadForm({ variant = "card", className }: Props) {
           {errors.phone && (
             <p className="mt-1 text-xs text-destructive">{errors.phone.message}</p>
           )}
-          <p className="mt-2 inline-flex items-center gap-1.5 text-[11px] text-navy/50">
-            <Lock className="h-3 w-3" /> Your information is secure and never shared.
-          </p>
         </Row>
 
         <button
@@ -402,10 +380,14 @@ export function LeadForm({ variant = "card", className }: Props) {
             </>
           ) : (
             <>
-              See Matching Spaces <ArrowRight className="h-4 w-4" />
+              Show Me Matches <ArrowRight className="h-4 w-4" />
             </>
           )}
         </button>
+
+        <p className="flex items-center justify-center gap-1.5 text-center text-[12px] text-navy/55">
+          <Lock className="h-3 w-3" /> Your information is secure and never shared.
+        </p>
       </div>
     </form>
   );
