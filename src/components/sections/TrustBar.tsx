@@ -41,7 +41,7 @@ export function TrustBar() {
                   width={512}
                   height={512}
                   loading="lazy"
-                  className="h-8 w-auto max-w-[120px] object-contain opacity-60 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 sm:h-10"
+                  className="h-12 w-auto max-w-[180px] object-contain opacity-70 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 sm:h-14 lg:h-16"
                 />
               </li>
             ))}
