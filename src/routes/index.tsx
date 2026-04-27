@@ -52,6 +52,7 @@ function HomePage() {
       </main>
       <SiteFooter />
       <MobileStickyBar />
+      <ChatWidget />
     </div>
   );
 }
