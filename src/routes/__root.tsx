@@ -36,7 +36,7 @@ export const Route = createRootRoute({
           "Month-to-month warehouse, office, parking & yard space across 50+ locations in 22 states. All-in pricing. No build-out. Move in within 48 hours.",
       },
       { name: "author", content: "Cubework" },
-      { property: "og:title", content: "Cubework — Flexible Warehouse Space" },
+      { property: "og:title", content: "Cubework — Flexible Warehouse Space. Move In This Week." },
       {
         property: "og:description",
         content:
@@ -44,6 +44,12 @@ export const Route = createRootRoute({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Cubework — Flexible Warehouse Space. Move In This Week." },
+      { name: "description", content: "Find and lease flexible industrial warehouse and office spaces across 50 locations." },
+      { property: "og:description", content: "Find and lease flexible industrial warehouse and office spaces across 50 locations." },
+      { name: "twitter:description", content: "Find and lease flexible industrial warehouse and office spaces across 50 locations." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/92c9b79e-f8b8-42e4-ac9c-5d0f92ad470c/id-preview-75cf9169--ea4fa0cf-039c-46ed-aba6-cfd136e8cb43.lovable.app-1777088937436.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/92c9b79e-f8b8-42e4-ac9c-5d0f92ad470c/id-preview-75cf9169--ea4fa0cf-039c-46ed-aba6-cfd136e8cb43.lovable.app-1777088937436.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
