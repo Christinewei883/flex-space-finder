@@ -167,23 +167,50 @@ export function LeadForm({ variant = "card", className }: Props) {
       aria-labelledby={`${formId}-title`}
     >
       <div className="flex items-center justify-between gap-3">
-        <div className="font-display text-[10px] font-bold uppercase tracking-[0.24em] text-green-dark">
+        <div className="font-display text-[11px] font-bold uppercase tracking-[0.24em] text-green-dark">
           Find Your Space
         </div>
-        <div className="inline-flex items-center gap-1.5 rounded-full bg-green/10 px-2.5 py-1 text-[11px] font-semibold text-green-dark">
-          <Zap className="h-3 w-3" fill="currentColor" />
+        <div className="inline-flex items-center gap-1.5 text-[12px] font-medium text-navy/60">
+          <Clock className="h-3.5 w-3.5" />
           Takes ~60 seconds
         </div>
       </div>
-      <h2
+
+      {/* Step indicator */}
+      <ol
+        className="mt-5 grid grid-cols-4 gap-2"
+        aria-label="Form progress"
         id={`${formId}-title`}
-        className="mt-3 font-display text-[2rem] font-black leading-[1.05] tracking-tight text-navy sm:text-[2.25rem]"
       >
-        Let's find your <span className="text-green-dark">perfect space.</span>
-      </h2>
-      <p className="mt-2 text-[14px] leading-relaxed text-navy/60">
-        Answer a few quick questions and we'll show you the best matches — fast.
-      </p>
+        {[
+          { n: 1, label: "Location" },
+          { n: 2, label: "Space Type" },
+          { n: 3, label: "Move-In" },
+          { n: 4, label: "Details" },
+        ].map((step, i, arr) => (
+          <li key={step.n} className="relative flex flex-col items-center">
+            {i < arr.length - 1 && (
+              <span
+                aria-hidden
+                className="absolute left-[calc(50%+18px)] right-[calc(-50%+18px)] top-[14px] border-t border-dashed border-navy/20"
+              />
+            )}
+            <span
+              className={cn(
+                "relative z-10 flex h-7 w-7 items-center justify-center rounded-full font-display text-xs font-bold",
+                step.n === 1
+                  ? "bg-green text-white"
+                  : "bg-navy/10 text-navy/50",
+              )}
+            >
+              {step.n}
+            </span>
+            <span className="mt-1.5 text-[10px] font-semibold uppercase tracking-wider text-navy/60">
+              {step.label}
+            </span>
+          </li>
+        ))}
+      </ol>
 
       {/* Honeypot */}
       <div aria-hidden className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
