@@ -46,7 +46,7 @@ export function Locations() {
               Major U.S. logistics corridors — port-adjacent, near interstates, ready to operate.
             </p>
           </div>
-          <div className="flex items-center gap-3 pt-10">
+          <div className="flex items-center gap-4 pt-10">
             <a
               href="#search"
               className="inline-flex items-center gap-1.5 font-display text-xs font-bold uppercase tracking-[0.18em] text-navy transition-colors hover:text-green-dark"
@@ -54,6 +54,22 @@ export function Locations() {
               Find one near me
               <ArrowRight className="h-3.5 w-3.5" />
             </a>
+            <div className="hidden gap-2 lg:flex">
+              <button
+                type="button"
+                aria-label="Previous"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-navy/15 bg-white text-navy transition-all hover:border-navy hover:bg-navy hover:text-white"
+              >
+                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+              </button>
+              <button
+                type="button"
+                aria-label="Next"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-navy/15 bg-white text-navy transition-all hover:border-navy hover:bg-navy hover:text-white"
+              >
+                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </div>
           </div>
         </div>
 
