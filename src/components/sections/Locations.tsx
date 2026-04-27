@@ -111,13 +111,13 @@ export function Locations() {
                   loading="lazy"
                   className="h-full w-full object-cover"
                 />
-                <span className="absolute left-3 top-3 rounded-md bg-white/95 px-2.5 py-1 font-display text-[10px] font-bold uppercase tracking-[0.18em] text-navy shadow-sm">
+                <span className="absolute left-3 top-3 rounded-full bg-white/95 px-3 py-1 font-display text-[10px] font-bold uppercase tracking-[0.16em] text-navy shadow-sm">
                   {l.state}
                 </span>
                 {l.status && (
                   <span
                     className={cn(
-                      "absolute right-3 top-3 rounded-md px-2.5 py-1 font-display text-[10px] font-bold uppercase tracking-[0.18em] shadow-sm",
+                      "absolute right-3 top-3 rounded-full px-3 py-1 font-display text-[10px] font-bold uppercase tracking-[0.16em] shadow-sm whitespace-nowrap",
                       STATUS_STYLES[l.status],
                     )}
                   >
