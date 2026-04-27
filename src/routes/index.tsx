@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { MobileStickyBar } from "@/components/MobileStickyBar";
+import { ChatWidget } from "@/components/ChatWidget";
 import { IndustriesSlider } from "@/components/IndustriesSlider";
 import { Hero } from "@/components/sections/Hero";
 import { TrustBar } from "@/components/sections/TrustBar";
@@ -51,6 +52,7 @@ function HomePage() {
       </main>
       <SiteFooter />
       <MobileStickyBar />
+      <ChatWidget />
     </div>
   );
 }
