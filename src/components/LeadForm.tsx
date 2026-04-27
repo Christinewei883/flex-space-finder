@@ -407,7 +407,6 @@ export function LeadForm({ variant = "card", className }: Props) {
           )}
         </button>
       </div>
-      </div>
     </form>
   );
 }
