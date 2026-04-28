@@ -9,6 +9,7 @@ const NAV = [
   { label: "Spaces", href: "#spaces" },
   { label: "Industries", href: "#industries" },
   { label: "Pricing", href: "#pricing" },
+  { label: "Blogs", href: "#blogs" },
 ] as const;
 
 export function SiteHeader() {
