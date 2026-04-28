@@ -54,9 +54,9 @@ export const WHY: WhyCard[] = [
   },
   {
     icon: DollarSign,
-    title: "All-In Pricing",
-    text: "One monthly rate. Utilities, maintenance, security, property management — included. No NNN ambush.",
-    badge: "No surprises",
+    title: "Expand & Downsize on Your Terms",
+    text: "Grow into more space when sales spike. Pull back when the season ends. Adjust square footage without breaking your contract or starting over.",
+    badge: "Flexible footprint",
   },
   {
     icon: MapPin,
