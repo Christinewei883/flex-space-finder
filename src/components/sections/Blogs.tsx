@@ -141,7 +141,7 @@ export function Blogs() {
           <div className="max-w-2xl">
             <SectionEyebrow>Latest Insights</SectionEyebrow>
             <h2 className="mt-3 font-display text-4xl font-black uppercase tracking-tight text-navy md:text-5xl text-balance">
-              From the Cubework Blog
+              Insights That Drive Smarter Logistics Decisions
             </h2>
             <p className="mt-3 text-base leading-relaxed text-navy/60">
               Stay updated with the latest insights in logistics, transportation, and supply chain management.
