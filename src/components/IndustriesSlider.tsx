@@ -180,12 +180,24 @@ export function IndustriesSlider() {
                         <span className="ml-1 text-base font-bold text-navy/50">{ind.unit}</span>
                       </div>
                     </div>
-                    <button className="inline-flex items-center gap-2.5 font-display text-xs font-bold uppercase tracking-wider text-navy transition-all hover:gap-4 hover:text-green-dark">
-                      Learn More
-                      <span className="flex h-8 w-8 items-center justify-center rounded-full bg-green transition-transform hover:scale-110">
-                        <ArrowRight className="h-3.5 w-3.5 text-white" strokeWidth={2.5} />
-                      </span>
-                    </button>
+                    {ind.href ? (
+                      <Link
+                        to={ind.href}
+                        className="inline-flex items-center gap-2.5 font-display text-xs font-bold uppercase tracking-wider text-navy transition-all hover:gap-4 hover:text-green-dark"
+                      >
+                        Learn More
+                        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-green transition-transform hover:scale-110">
+                          <ArrowRight className="h-3.5 w-3.5 text-white" strokeWidth={2.5} />
+                        </span>
+                      </Link>
+                    ) : (
+                      <button className="inline-flex items-center gap-2.5 font-display text-xs font-bold uppercase tracking-wider text-navy transition-all hover:gap-4 hover:text-green-dark">
+                        Learn More
+                        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-green transition-transform hover:scale-110">
+                          <ArrowRight className="h-3.5 w-3.5 text-white" strokeWidth={2.5} />
+                        </span>
+                      </button>
+                    )}
                   </div>
                 </div>
               </article>
