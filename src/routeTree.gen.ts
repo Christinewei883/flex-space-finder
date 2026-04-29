@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as IndustriesAmazonFbaD2cRouteImport } from './routes/industries.amazon-fba-d2c'
 import { Route as ApiPublicChatRouteImport } from './routes/api/public/chat'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndustriesAmazonFbaD2cRoute = IndustriesAmazonFbaD2cRouteImport.update({
+  id: '/industries/amazon-fba-d2c',
+  path: '/industries/amazon-fba-d2c',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiPublicChatRoute = ApiPublicChatRouteImport.update({
@@ -25,27 +31,31 @@ const ApiPublicChatRoute = ApiPublicChatRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/industries/amazon-fba-d2c': typeof IndustriesAmazonFbaD2cRoute
   '/api/public/chat': typeof ApiPublicChatRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/industries/amazon-fba-d2c': typeof IndustriesAmazonFbaD2cRoute
   '/api/public/chat': typeof ApiPublicChatRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/industries/amazon-fba-d2c': typeof IndustriesAmazonFbaD2cRoute
   '/api/public/chat': typeof ApiPublicChatRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/api/public/chat'
+  fullPaths: '/' | '/industries/amazon-fba-d2c' | '/api/public/chat'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/api/public/chat'
-  id: '__root__' | '/' | '/api/public/chat'
+  to: '/' | '/industries/amazon-fba-d2c' | '/api/public/chat'
+  id: '__root__' | '/' | '/industries/amazon-fba-d2c' | '/api/public/chat'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  IndustriesAmazonFbaD2cRoute: typeof IndustriesAmazonFbaD2cRoute
   ApiPublicChatRoute: typeof ApiPublicChatRoute
 }
 
@@ -56,6 +66,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industries/amazon-fba-d2c': {
+      id: '/industries/amazon-fba-d2c'
+      path: '/industries/amazon-fba-d2c'
+      fullPath: '/industries/amazon-fba-d2c'
+      preLoaderRoute: typeof IndustriesAmazonFbaD2cRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/public/chat': {
@@ -70,6 +87,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  IndustriesAmazonFbaD2cRoute: IndustriesAmazonFbaD2cRoute,
   ApiPublicChatRoute: ApiPublicChatRoute,
 }
 export const routeTree = rootRouteImport
