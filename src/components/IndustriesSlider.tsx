@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { Link } from "@tanstack/react-router";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import indEcom from "@/assets/industry-ecom.jpg";
 import indFba from "@/assets/industry-fba.jpg";
