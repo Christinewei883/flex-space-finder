@@ -15,6 +15,7 @@ type Industry = {
   uses: string[];
   price: string;
   unit: string;
+  href?: string;
 };
 
 const INDUSTRIES: Industry[] = [
