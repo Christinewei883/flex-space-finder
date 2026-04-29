@@ -34,6 +34,7 @@ const INDUSTRIES: Industry[] = [
     uses: ["FBA prep & labeling", "Q4 surge capacity", "Kitting & bundling", "Multi-location fulfillment"],
     price: "$300",
     unit: "/mo",
+    href: "/industries/amazon-fba-d2c",
   },
   {
     img: indTruck,
